@@ -1,4 +1,4 @@
-# Me
-Here is my personal web page so people can learn more about me !
+Looking to get to know me ? 
+Take a look on my website : 
 
 https://BastianMuratory.github.io
