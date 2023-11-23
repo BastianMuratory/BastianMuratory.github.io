@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      height: 2000px; /* Add enough content to enable scrolling */
+      margin: 0;
+      padding: 0;
+    }
+
+    #changeImage {
+      width: 100%;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.5s ease;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let header = document.getElementById("changeImage");
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          if (!scrolled) {
+            header.style.backgroundImage = "url('/home/bastian/Documents/Github/BastianMuratory.github.io/assets/images/1311.png')";
+            scrolled = true;
+          }
+        } else {
+          if (scrolled) {
+            header.style.backgroundImage = "url('/home/bastian/Documents/Github/BastianMuratory.github.io/assets/images/me600.png')";
+            scrolled = false;
+          }
+        }
+      };
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Content to enable scrolling -->
+  <div style="height: 1000px;"></div>
+
+  <!-- Image that changes on scroll -->
+  <div id="changeImage" style="background-image: url('path/to/your/first-image.jpg');"></div>
+
+  <!-- More content -->
+  <div style="height: 1000px;"></div>
+
+</body>
+</html>

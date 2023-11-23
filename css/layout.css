@@ -15,7 +15,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+#project-header {
+  text-align: center;
+  margin: 0 auto;
+}
 
 
 /* Main Page Layout */
