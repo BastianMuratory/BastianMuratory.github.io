@@ -1,18 +1,7 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-
-    <!-- 
-      TODO
-
-      Upload your Unemployable (or whatever photo you like) to the assets/images folder
-      and change the name of the image below to match the uploaded one
-
-      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
-
-      This should be the same across all pages.
-     -->
     <link rel="icon" href="./assets/images/me600.png" />
 		<title>Bastian Muratory</title>
     <meta name="description" content="A portfolio template for the Unemployables community.">
@@ -28,44 +17,25 @@
     <meta http-equiv='pragma' content='no-cache'>
 	</head>
 	<body>
-    <!-- NAVBAR -->
     <div class="navbar">
       <a class="nav-title-link" href="./index.html">
-        <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
         <span class="nav-title">Home</span>
-         <!-- TODO - Change the email after 'mailto:' to your email address for contact -->
         <a class="button" href="mailto:bastian.muratory@gmail.com">
           <span class="button-text">Contact Me</span>
         </a>
       </a>
     </div>
 
-    <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
 
-      <!-- PORTFOLIO HEADER -->
       <div id="portfolio-header">
         <div id="portfolio-header-image-container">
-          <!-- 
-            TODO
-
-            - Change the img "src" attribute to point to the Unemployable image you uploaded (or whatever image).
-            - Change the number to point to your Unemployable & replace the OpenSea link with your own
-            - If you aren't using an Unemployable as your image, remove the entire "a" element
-          -->
           <img src="./assets/images/me600.png" class="portfolio-header-image">
           <a class="no-underline" target="_blank" href="https://opensea.io/assets/0xe0be388ab81c47b0f098d2030a1c9ef190691a8a/1311">
             <span class="image-caption">Hé oui c'est moi !</span>
           </a>
         </div>
 
-          <!-- 
-            TODO
-
-            - Change the main-title to whatver you want
-            - Change the body-text after that to a quick introduction to what you do
-            - Edit the button text if you feel like it. It will link to the projects section below.
-          -->
         <div id="portfolio-header-text-container">
             <div class="header-text">
               <span class="main-title">Who am I ?</span>
@@ -78,13 +48,7 @@
         </div>
       </div>
 
-      <!-- ABOUT SECTION -->
-      <!-- 
-        TODO
-
-        - Change the subheader-text to whatever header you want
-        - Add paragraphs using the <div class="body-text"></div> elements in the "about-section-content"
-      -->
+     
       <div id="about-section">
         <span class="subheader-text">My Background / About Me</span>
         <div class="about-section-content">
@@ -93,17 +57,13 @@
         </div>
       </div>
 
-      <!-- PROJECTS / MY WORK SECTION -->
+     
       <div id="my-work-section">
-        <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
+       
         <span class="subheader-text">Work and personal projects</span>
 
         <div class="projects-container">
-          <!-- 
-            ========================================
-            PROJECTS // INDEX
-            ========================================
-          -->
+         
           <div class="project-card">
             <img src="./assets/images/desktop.jpeg" class="project-image">
             <div class="project-card-text-container">
@@ -115,7 +75,7 @@
               <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
             </a>
           </div>
-          <!------>
+          
           <div class="project-card">
             <img src="./assets/images/desktop.jpeg" class="project-image">
             <div class="project-card-text-container">
@@ -127,7 +87,7 @@
               <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
             </a>
           </div>
-          <!------>
+          
           <div class="project-card">
             <img src="./assets/images/desktop.jpeg" class="project-image">
             <div class="project-card-text-container">
@@ -144,16 +104,60 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
+  
     <div id="footer">
-      <!-- 
-        TODO - Change the email after "mailto" to your contact email 
-      
-        This should be the same across all pages.
-      -->
       <a class="icon-link" href="mailto:bastian.muratory@gmail.com">
         <image src="./assets/icons/mail.svg" class="footer-icon"/>
       </a>
     </div>
 	</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WEBP to PNG Converter</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 2em; }
+    input, button { margin: 1em; }
+  </style>
+</head>
+<body>
+  <h1>WEBP to PNG Converter</h1>
+  <input type="file" id="upload" accept="image/webp" />
+  <br />
+  <canvas id="canvas" style="display:none;"></canvas>
+  <br />
+  <a id="downloadLink" style="display:none;" download="converted.png">Download PNG</a>
+
+  <script>
+    const upload = document.getElementById('upload');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const downloadLink = document.getElementById('downloadLink');
+
+    upload.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const img = new Image();
+        img.onload = function() {
+          canvas.width = img.width;
+          canvas.height = img.height;
+          ctx.drawImage(img, 0, 0);
+          canvas.style.display = 'block';
+
+          const pngUrl = canvas.toDataURL('image/png');
+          downloadLink.href = pngUrl;
+          downloadLink.style.display = 'inline-block';
+        };
+        img.src = evt.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
 </html>
+
