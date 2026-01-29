@@ -1,5 +1,6 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
 }
 
 .nav-title {
@@ -20,16 +21,20 @@ body {
 .main-title {
   font-size: 40px;
   font-weight: 700;
+  margin: 0;
 }
 
 .subheader-text {
   font-size: 20px;
   font-weight: 700;
+  margin: 0;
 }
 
 .body-text {
   font-size: 16px;
   font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .project-card-text {

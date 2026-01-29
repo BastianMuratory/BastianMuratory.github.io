@@ -1,0 +1,186 @@
+/* Theme Variables - Beige + Teal + Coral */
+:root {
+  /* Primary Colors */
+  --color-primary: #f08c5d;      /* Coral vibrant */
+  --color-secondary: #4a9fb5;    /* Teal bleu */
+  --color-accent: #f5ede3;       /* Beige crème clair */
+  --color-accent-warm: #e8d4b8;  /* Beige doré */
+  
+  /* Neutrals */
+  --color-text-dark: #2d2520;    /* Marron très foncé */
+  --color-text-muted: #6b6b6b;   /* Gris neutre */
+  --color-bg-light: #f5ede3;     /* Beige clair */
+  --color-bg-neutral: #e8dfd7;   /* Beige poudre */
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #f08c5d 0%, #d97757 100%);
+  --gradient-secondary: linear-gradient(135deg, #4a9fb5 0%, #3b7d94 100%);
+  --gradient-warm: linear-gradient(135deg, #e8d4b8 0%, #d4a574 100%);
+  --gradient-mixed: linear-gradient(135deg, #f08c5d 0%, #4a9fb5 100%);
+}
+
+/* Apply to body */
+body {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+
+/* Section and about backgrounds */
+.about-section {
+  background-color: var(--color-bg-neutral) !important;
+}
+
+/* Cards styling */
+.card {
+  border-color: var(--color-bg-neutral);
+  background-color: white;
+}
+
+.card.bg-light {
+  background-color: var(--color-bg-neutral) !important;
+}
+
+/* Badges */
+.badge.text-bg-light {
+  background-color: var(--color-bg-neutral) !important;
+  color: var(--color-text-dark) !important;
+}
+
+.badge.text-bg-warning {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+}
+
+.badge.text-bg-info {
+  background-color: var(--color-secondary) !important;
+  color: white !important;
+  white-space: nowrap !important;
+}
+
+.badge.text-bg-success {
+  background-color: var(--color-secondary) !important;
+  color: white !important;
+}
+
+/* Footer background */
+#footer {
+  background-color: var(--color-bg-neutral);
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: var(--color-bg-neutral);
+  border-bottom: 1px solid #d87e2b;
+}
+
+/* Form controls */
+.form-select,
+.form-select-sm {
+  border-color: var(--color-secondary);
+}
+
+.form-select:focus,
+.form-select-sm:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(240, 140, 93, 0.25);
+}
+
+/* Link color */
+a,
+.card-link {
+  color: var(--color-primary);
+}
+
+a:hover,
+.card-link:hover {
+  color: var(--color-secondary);
+}
+
+/* Button styling */
+.btn-outline-primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.btn-outline-secondary {
+  color: var(--color-text-muted);
+  border-color: var(--color-text-muted);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary.active {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: white;
+}
+
+/* Custom button styles */
+.button-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: white !important;
+}
+
+.button-primary:hover {
+  background-color: #d97757 !important;
+  border-color: #d97757 !important;
+}
+
+.button-secondary {
+  background-color: transparent !important;
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.button-secondary:hover {
+  background-color: rgba(240, 140, 93, 0.1) !important;
+}
+
+/* Section title accent */
+.section-title {
+  color: var(--color-text-dark);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+/* Shadow styling */
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(240, 140, 93, 0.1) !important;
+}
+
+/* Input placeholders */
+::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Selection highlight */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Scrollbar styling (webkit browsers) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-neutral);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}

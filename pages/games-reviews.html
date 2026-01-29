@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <link rel="icon" href="../assets/images/me600.png" />
+		<title>Game Reviews - Bastian Muratory</title>
+    <meta name="description" content="My reviews and impressions of video games">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv='cache-control' content='no-cache'>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/theme.css">
+
+    <script defer src="../js/script.js"></script>
+    <script defer src="../js/data/gamesData.js"></script>
+    <script defer src="../js/games-reviews.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="./projects.html" class="nav-link">Projects</a>
+        <a href="./origami.html" class="nav-link">Origami</a>
+        <a href="./games-reviews.html" class="nav-link fw-bold">Games</a>
+        <a class="button ms-auto" href="mailto:bastian.muratory@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="container py-4">
+
+      <!-- PAGE HEADER -->
+      <section id="page-header">
+        <h1 class="main-title">My Video Game Reviews</h1>
+        <p class="body-text">Discover my impressions and reviews of games I've played recently</p>
+      </section>
+
+      <!-- REVIEWS SECTION -->
+      <section id="games-reviews">
+        <h2 class="section-title mb-3">Latest Reviews</h2>
+        
+        <!-- FILTER AND SORT CONTROLS -->
+        <div class="mb-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <h3 class="h5 mb-0">Filters and Sorting</h3>
+            <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false" aria-controls="filterCollapse">
+              <span id="filter-toggle-text">Show Filters</span> 
+              <svg width="16" height="16" fill="currentColor" class="ms-1" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="collapse" id="filterCollapse">
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-md-4">
+                <label class="form-label fw-bold">Filter by Genre:</label>
+                <div class="d-flex gap-2 flex-wrap" id="genre-filters">
+                  <button class="btn btn-outline-primary btn-sm active" data-filter="all">All</button>
+                  <!-- Buttons will be generated dynamically -->
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label fw-bold">Filter by Year:</label>
+                <div class="d-flex gap-2 flex-wrap" id="year-filters">
+                  <button class="btn btn-outline-primary btn-sm active" data-filter="all">All</button>
+                  <!-- Buttons will be generated dynamically -->
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label fw-bold">Filter by Rating:</label>
+                <div class="d-flex gap-2 flex-wrap" id="rating-filters">
+                  <button class="btn btn-outline-primary btn-sm active" data-filter="all">All</button>
+                  <button class="btn btn-outline-secondary btn-sm" data-filter="5">★★★★★</button>
+                  <button class="btn btn-outline-secondary btn-sm" data-filter="4">★★★★</button>
+                  <button class="btn btn-outline-secondary btn-sm" data-filter="3">★★★</button>
+                  <button class="btn btn-outline-secondary btn-sm" data-filter="2">★★</button>
+                  <button class="btn btn-outline-secondary btn-sm" data-filter="1">★</button>
+                </div>
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-12 col-md-4">
+                <label class="form-label fw-bold">Sort by:</label>
+                <select class="form-select form-select-sm" id="sort-select">
+                  <option value="date-desc">Date (Recent)</option>
+                  <option value="date-asc">Date (Oldest)</option>
+                  <option value="rating-desc">Rating (Best)</option>
+                  <option value="rating-asc">Rating (Lowest)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4" id="reviews-container">
+          <!-- Cards will be generated dynamically by JavaScript -->
+        </div>
+      </section>
+
+      <!-- STATS SECTION -->
+      <section id="games-stats" class="mt-4">
+        <h2 class="section-title mb-3">My Gaming Passion</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="card text-white text-center shadow-sm" style="background: linear-gradient(135deg, #f08c5d 0%, #d97757 100%); border: none;">
+              <div class="card-body py-4">
+                <h3 class="card-title display-6">150+</h3>
+                <p class="card-text">Games Played</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card text-white text-center shadow-sm" style="background: linear-gradient(135deg, #4a9fb5 0%, #3b7d94 100%); border: none;">
+              <div class="card-body py-4">
+                <h3 class="card-title display-6">2000+</h3>
+                <p class="card-text">Hours Played</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card text-white text-center shadow-sm" style="background: linear-gradient(135deg, #f08c5d 0%, #4a9fb5 100%); border: none;">
+              <div class="card-body py-4">
+                <h3 class="card-title display-6">45</h3>
+                <p class="card-text">Reviews Written</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <a class="icon-link" href="mailto:bastian.muratory@gmail.com">
+        <img src="../assets/icons/mail.svg" class="footer-icon" alt="email"/>
+      </a>
+    </div>
+
+    <!-- Bootstrap JS (required for collapsible filters) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+	</body>
+</html>

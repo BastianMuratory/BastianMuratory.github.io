@@ -1,106 +1,245 @@
+/* ============================================
+   UTILITIES & UTILITY CLASSES
+   ============================================ */
 
 /* Icons */
-
-.right-arrow-icon {
-  width: 16px;
-  height: 16px;
-  margin-top: 1px;
+.right-arrow-icon,
+.footer-icon {
+  width: auto;
+  height: auto;
 }
 
-.footer-icon {
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 32px;
+  display: flex;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 200ms ease-in-out;
+  text-decoration: none;
+}
+
+.nav-link.fw-bold {
+  color: var(--color-primary);
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+/* Button Styles */
+a.button {
+  padding: 10px 20px;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  width: fit-content;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 600;
+  transition: all 200ms ease-in-out;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+a.button:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+a.button.button-primary {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+a.button.button-primary:hover {
+  opacity: 0.85;
+}
+
+a.button.button-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+a.button.button-secondary:hover {
+  background: rgba(240, 140, 93, 0.1);
+}
+
+/* Typography Utility Classes */
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--color-text-dark);
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.subheader-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin: 0;
+}
+
+.body-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.main-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-text-dark);
+}
+
+.card-title {
+  color: var(--color-text-dark);
+  font-weight: 600;
+}
+
+.button-text {
+  display: inline;
+}
+
+/* Hover & Transitions */
+a,
+.card-link,
+button {
+  transition: all 200ms ease-in-out;
+}
+
+/* Footer */
+#footer {
+  width: 100%;
+  display: flex;
+  padding: 40px 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 60px;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-bg-neutral);
+  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  background-color: var(--color-primary);
+  transform: rotate(15deg);
+}
+
+.icon-link img {
   width: 20px;
   height: 20px;
 }
 
-a.icon-link {
-  transition: transform 200ms ease-in-out;
-}
-
-a.icon-link:hover {
-  cursor: pointer;
-  stroke-width: 5;
-  margin: 0;
-  transform: rotate(15deg);
-}
-
-
-/* Navbar Styling */
-
-.navbar {
-  width: 100%;
-  padding: 30px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.nav-title-link {
-  color: black;
-  text-decoration: none;
-}
-
-.nav-title-link:hover {
-  text-decoration: underline;
-}
-
-/* Small devices (portrait tablets and large phones, 800px and below) */
-@media only screen and (max-width: 800px) {
+/* Responsive: Tablet */
+@media (max-width: 768px) {
   .navbar {
-    padding: 20px 20px;
-    background-color: white
+    padding: 12px 24px;
   }
-}
 
+  .nav-links {
+    gap: 20px;
+  }
 
-/* Button Styling */
+  .nav-link {
+    font-size: 13px;
+  }
 
-a.button {
-  padding: 8px 16px;
-  border: 3px solid #141414;
-  border-radius: 50px;
-  color: black;
-  text-decoration: none;
-  width: fit-content;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
+  .hero-title {
+    font-size: 36px;
+  }
 
-a.button:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  cursor: pointer;
-}
+  .hero-subtitle {
+    font-size: 16px;
+  }
 
+  .main-title {
+    font-size: 32px;
+  }
 
-/* Footer Styling */
+  .subheader-text {
+    font-size: 20px;
+  }
 
-#footer {
-  width: 100%;
-  display: flex;
-  padding: 30px 50px;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-
-/* Link Styling */
-a.no-underline {
-  text-decoration: none;
-  color: black
-}
-
-a.no-underline:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/* Small devices (portrait tablets and large phones, 800px and below) */
-@media only screen and (max-width: 800px) {
   #footer {
-    padding: 20px 20px;
+    padding: 30px 40px;
   }
 }
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 16px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  a.button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  .body-text {
+    font-size: 14px;
+  }
+
+  #footer {
+    padding: 20px 16px;
+  }

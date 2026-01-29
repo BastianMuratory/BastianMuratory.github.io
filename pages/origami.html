@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <link rel="icon" href="../assets/images/me600.png" />
+		<title>My Origami - Bastian Muratory</title>
+    <meta name="description" content="Gallery of my origami creations with explanations">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv='cache-control' content='no-cache'>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/theme.css">
+
+    <script defer src="../js/script.js"></script>
+    <script defer src="../js/data/origamiData.js"></script>
+    <script defer src="../js/origami.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="./projects.html" class="nav-link">Projects</a>
+        <a href="./origami.html" class="nav-link fw-bold">Origami</a>
+        <a href="./games-reviews.html" class="nav-link">Games</a>
+        <a class="button ms-auto" href="mailto:bastian.muratory@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="container py-4">
+
+      <!-- PAGE HEADER -->
+      <section id="page-header">
+        <h1 class="main-title">My Origami Creations</h1>
+        <p class="body-text">Discover my paper folding creations with explanations about the techniques used</p>
+      </section>
+
+      <!-- FILTER CONTROLS -->
+      <section class="mb-5">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <h3 class="h5 mb-0">Filter by artist:</h3>
+          <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false" aria-controls="filterCollapse">
+            <span id="filter-toggle-text">Show Filters</span> 
+            <svg width="16" height="16" fill="currentColor" class="ms-1" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="collapse" id="filterCollapse">
+          <div class="d-flex gap-2 flex-wrap" id="artist-filters">
+            <button class="btn btn-outline-primary btn-sm active" data-filter="all">All</button>
+            <!-- Buttons will be generated dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ORIGAMI GALLERY -->
+      <section id="origami-gallery">
+        <h2 class="section-title mb-3">Gallery</h2>
+        <div class="row g-4" id="origami-container">
+          <!-- Dynamically rendered from origamiData.js -->
+        </div>
+      </section>
+
+      <!-- ORIGAMI TIPS -->
+      <section id="origami-tips" class="mt-4">
+        <h2 class="section-title mb-3">Tips for Beginners</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 bg-light">
+              <div class="card-body">
+                <h5 class="card-title">📄 Quality Paper</h5>
+                <p class="card-text">Use origami paper or good quality thin paper. The right paper makes all the difference.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 bg-light">
+              <div class="card-body">
+                <h5 class="card-title">✋ Precise Folds</h5>
+                <p class="card-text">Folds must be sharp and well marked. Use your nails or a folding tool to get clean results.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 bg-light">
+              <div class="card-body">
+                <h5 class="card-title">📚 Start Simple</h5>
+                <p class="card-text">Before tackling complex projects, master the basics with the traditional crane.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <a class="icon-link" href="mailto:bastian.muratory@gmail.com">
+        <img src="../assets/icons/mail.svg" class="footer-icon" alt="email"/>
+      </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+	</body>
+</html>

@@ -1,107 +1,117 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
     <link rel="icon" href="./assets/images/me600.png" />
-		<title>Bastian Muratory</title>
-    <meta name="description" content="A portfolio template for the Unemployables community.">
+		<title>Bastian Muratory - Portfolio</title>
+    <meta name="description" content="Découvrez mes projets, critiques de jeux et créations en origami">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv='cache-control' content='no-cache'>
 
+		<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/typography.css">
     <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/theme.css">
 
 		<script defer src="./js/script.js"></script>
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
+		<script defer src="./js/data/gamesData.js"></script>
+		<script defer src="./js/data/projectsData.js"></script>
+		<script defer src="./js/data/origamiData.js"></script>
+		<script defer src="./js/previewRenderer.js"></script>
 	</head>
 	<body>
+    <!-- NAVBAR -->
     <div class="navbar">
-      <a class="nav-title-link" href="./index.html">
-        <span class="nav-title">Home</span>
-        <a class="button" href="mailto:bastian.muratory@gmail.com">
+      <div class="nav-links">
+        <a href="./index.html" class="nav-link fw-bold">Home</a>
+        <a href="./pages/projects.html" class="nav-link">Projects</a>
+        <a href="./pages/origami.html" class="nav-link">Origami</a>
+        <a href="./pages/games-reviews.html" class="nav-link">Games</a>
+        <a class="button ms-auto" href="mailto:bastian.muratory@gmail.com">
           <span class="button-text">Contact Me</span>
         </a>
-      </a>
+      </div>
     </div>
 
+    <!-- MAIN CONTENT -->
     <div id="main-content">
 
-      <div id="portfolio-header">
-        <div id="portfolio-header-image-container">
-          <img src="./assets/images/me600.png" class="portfolio-header-image">
-          <a class="no-underline" target="_blank" href="https://opensea.io/assets/0xe0be388ab81c47b0f098d2030a1c9ef190691a8a/1311">
-            <span class="image-caption">Hé oui c'est moi !</span>
-          </a>
-        </div>
-
-        <div id="portfolio-header-text-container">
-            <div class="header-text">
-              <span class="main-title">Who am I ?</span>
-              <div class="body-text">I'm an embeded software engineer who loves to check out all sort of technologies !</div>
-            </div>
-            <a class="button" id="my-work-link">
-              <span class="button-text">What exactly does that means ?</span> 
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+      <!-- HERO SECTION -->
+      <section id="home" class="hero-section">
+        <div class="hero-text-container">
+          <h1 class="hero-title">Hi, I'm Bastian</h1>
+          <p class="hero-subtitle">Embedded systems engineer passionate about technology, origami and video games</p>
+          <div class="hero-cta">
+            <a href="#sections" class="button button-primary">
+              <span class="button-text">Discover My Creations</span>
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="arrow"/>
             </a>
-        </div>
-      </div>
-
-     
-      <div id="about-section">
-        <span class="subheader-text">My Background / About Me</span>
-        <div class="about-section-content">
-          <div class="body-text">Currently studying robotics and interractiv systems, I always loved discovering new stuff. With all the tecnologies availables nowadays, I just feel like in a giant playground</div>
-          <div class="body-text">From computer vision, IOT, robotics to creating games, what I enjoy the most is learning how to create what my mind is imagining</div>
-        </div>
-      </div>
-
-     
-      <div id="my-work-section">
-       
-        <span class="subheader-text">Work and personal projects</span>
-
-        <div class="projects-container">
-         
-          <div class="project-card">
-            <img src="./assets/images/desktop.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Career</div>
-              <div class="body-text project-card-text">My most recent job experiences</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            <a href="mailto:bastian.muratory@gmail.com" class="button button-secondary">
+              <span class="button-text">Let's Talk</span>
             </a>
           </div>
-          
-          <div class="project-card">
-            <img src="./assets/images/desktop.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Personal projects</div>
-              <div class="body-text project-card-text">Here you can find all the weird stuff I make when I'm not playing video games</div>
-            </div>
-            <a class="button" href="./project-pages/sketchProject.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          
-          <div class="project-card">
-            <img src="./assets/images/desktop.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">School Projects</div>
-              <div class="body-text project-card-text">Here are all the projects I took part in while I was studying robotics !</div>
-            </div>
-            <a class="button" href="./project-pages/SchoolProjects.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          
         </div>
-      </div>
+      </section>
+
+      <!-- ABOUT SECTION WITH PICTURE -->
+      <section class="about-with-picture-section">
+        <div class="about-image-container">
+          <img src="./assets/images/me600.png" class="about-image" alt="Bastian">
+        </div>
+        <div class="about-section">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
+            <p class="body-text">
+              I am currently a student in robotics and interactive systems. I am fascinated by emerging technologies and I love exploring how they work.
+            </p>
+            <p class="body-text">
+              Whether it's computer vision, IoT, robotics or game creation, I am passionate about transforming my ideas into reality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTIONS NAVIGATION -->
+      <section id="sections" class="sections-navigation">
+
+        <!-- PROJECTS SECTION PREVIEW -->
+        <div class="section-preview mt-5">
+          <div class="section-preview-header">
+            <h3 class="subheader-text">💼 My Projects</h3>
+            <p class="body-text">Explore my professional, personal and academic projects</p>
+            <a href="./pages/projects.html" class="card-link">View All Projects →</a>
+          </div>
+          <div class="row g-4 mt-3" id="projects-preview-container">
+            <!-- Dynamically rendered -->
+          </div>
+        </div>
+
+        <!-- ORIGAMI SECTION PREVIEW -->
+        <div class="section-preview mt-5">
+          <div class="section-preview-header">
+            <h3 class="subheader-text">🎨 Origami</h3>
+            <p class="body-text">Discover my paper folding creations with detailed explanations</p>
+            <a href="./pages/origami.html" class="card-link">View Full Gallery →</a>
+          </div>
+          <div class="row g-4 mt-3" id="origami-preview-container">
+            <!-- Dynamically rendered -->
+          </div>
+        </div>
+
+        <!-- GAMES REVIEWS SECTION PREVIEW -->
+        <div class="section-preview mt-5">
+          <div class="section-preview-header">
+            <h3 class="subheader-text">🎮 Game Reviews</h3>
+            <p class="body-text">My impressions and reviews of games I've played recently</p>
+            <a href="./pages/games-reviews.html" class="card-link">View All Reviews →</a>
+          </div>
+          <div class="row g-4 mt-3" id="games-preview-container">
+            <!-- Dynamically rendered -->
+          </div>
+        </div>
+      </section>
     </div>
 
   
@@ -111,8 +121,8 @@
       </a>
     </div>
 	</body>
-</html>-->
-<!DOCTYPE html>
+</html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -158,6 +168,9 @@
       reader.readAsDataURL(file);
     });
   </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html>-->
 

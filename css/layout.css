@@ -13,6 +13,21 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Global image sizing to avoid overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bootstrap card images: keep a consistent aspect ratio */
+.card-img-top {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background-color: var(--color-bg-neutral);
 }
 
 #project-header {
@@ -24,10 +39,13 @@ body {
 /* Main Page Layout */
 
 #main-content {
-  margin: 225px 425px;
+  margin: 120px 60px 80px 60px;
   display: flex;
   flex-direction: column;
-  gap: 96px;
+  gap: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -177,48 +195,419 @@ body {
 
 /* Extra Extra large devices (large laptops and desktops, 1200px and below) */
 @media only screen and (max-width: 1600px) {
+
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ABOUT SECTION WITH PICTURE - TWO COLUMNS */
+.about-with-picture-section {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 60px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.about-image-container {
+  flex-basis: 150px;
+  flex-shrink: 0;
+  width: 150px;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  max-width: 150px;
+}
+
+.about-section {
+  flex: 1;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* SECTIONS NAVIGATION */
+.sections-navigation {
+  margin-bottom: 40px;
+}
+
+/* SECTION PREVIEWS */
+.section-preview {
+  margin-bottom: 60px;
+}
+
+.section-preview-header {
+  margin-bottom: 24px;
+}
+
+.section-preview-header h3 {
+  margin-bottom: 8px;
+}
+
+.section-preview-header p {
+  margin-bottom: 12px;
+  color: var(--color-text-muted, #666);
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: gap 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.card-link:hover {
+  color: #0052a3;
+}
+
+/* ORIGAMI PAGE */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.origami-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 200ms ease-in-out;
+}
+
+.origami-item:hover {
+  transform: translateY(-8px);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.origami-info {
+  padding: 24px;
+  background: white;
+}
+
+.origami-title {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.origami-description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.card-link:hover {
+  gap: 12px;
+}
+
+
+.origami-details {
+  display: flex;
+  gap: 12px;
+}
+
+.detail-badge {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.tip-card {
+  padding: 32px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border-left: 4px solid #0066cc;
+}
+
+.tip-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* GAMES REVIEWS PAGE */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.review-card {
+  padding: 32px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border-left: 4px solid #0066cc;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.review-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.review-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.review-rating {
+  color: #ffa500;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.review-date {
+  color: #666;
+  font-size: 14px;
+}
+
+.review-content {
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+.review-tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-block;
+  background: #e8f0ff;
+  color: #0066cc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.stat-card {
+  padding: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* PROJECTS PAGE */
+.projects-section {
+  margin-bottom: 60px;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.project-entry {
+  padding: 24px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border-left: 4px solid #0066cc;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.entry-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.entry-date {
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: #e8f0ff;
+  color: #0066cc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* PAGE HEADER */
+#page-header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+#page-header .main-title {
+  margin-bottom: 16px;
+}
+
+#page-header .body-text {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #666;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
   #main-content {
-    margin: 225px 275px;
+    margin: 100px 80px;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and below) */
 @media only screen and (max-width: 1200px) {
   #main-content {
-    margin: 225px 175px;
+    margin: 110px 50px 70px 50px;
+  }
+
+  .sections-grid,
+  .gallery-grid,
+  .tips-container,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Large devices (laptops/desktops, 1000px and below) */
-@media only screen and (max-width: 1000px) {
+/* Medium devices (tablets, 768px and below) */
+@media only screen and (max-width: 768px) {
   #main-content {
-    margin: 225px 75px;
+    margin: 110px 32px 70px 32px;
+  }
+
+  .about-with-picture-section {
+    flex-direction: column;
+  }
+
+  .about-image-container,
+  .about-section {
+    flex-basis: 100%;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 800px and below) */
 @media only screen and (max-width: 800px) {
   #main-content {
-    margin: 150px 50px;
+    margin: 100px 24px 60px 24px;
   }
 
-  #portfolio-header {
+  .sections-grid,
+  .gallery-grid,
+  .tips-container,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-header {
     flex-direction: column;
+    gap: 12px;
   }
 
-  .project-card {
-    max-width: calc((100% - 16px) / 2);
+  .hero-cta {
+    flex-direction: column;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and below) */
 @media only screen and (max-width: 600px) {
   #main-content {
-    margin: 125px 20px;
+    margin: 90px 16px 50px 16px;
   }
 
-  .project-card {
-    max-width: 100%;
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
   }
 }
 
