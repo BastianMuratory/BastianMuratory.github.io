@@ -2,10 +2,10 @@
 function generateStars(rating) {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
-  let stars = '★'.repeat(fullStars);
-  if (hasHalfStar) stars += '☆';
-  stars += '☆'.repeat(5 - Math.ceil(rating));
-  return stars;
+  let starsHtml = '<span style="color: #f08c5d;">★</span>'.repeat(fullStars);
+  if (hasHalfStar) starsHtml += '<span style="color: #f08c5d;">☆</span>';
+  starsHtml += '<span style="color: #d3d3d3;">☆</span>'.repeat(5 - Math.ceil(rating));
+  return starsHtml;
 }
 
 function capitalizeGenre(genre) {
@@ -40,30 +40,38 @@ document.addEventListener('DOMContentLoaded', function() {
   // Create review card element
   function createReviewCard(game) {
     const card = document.createElement('div');
-    card.className = 'col-12 col-lg-6 review-card';
+    card.className = 'col-12 review-card';
     card.setAttribute('data-genres', game.genres);
     card.setAttribute('data-rating', game.rating);
     card.setAttribute('data-date', game.date);
     card.setAttribute('data-year', game.date);
 
     const stars = generateStars(game.rating);
-    const month = new Date(game.date + '-01').toLocaleString('fr-FR', { month: 'short', year: 'numeric' });
+    const year = game.date;
 
-    const imageHtml = game.image ? `<img src="${game.image}" class="card-img-top" alt="${game.title}">` : '';
+    const imageHtml = game.image 
+      ? `<div class="col-md-4 d-flex ${game.squareImage ? 'align-items-center justify-content-end' : ''}">
+           <img loading="lazy" src="${game.image}" class="${game.squareImage ? 'img-fluid rounded' : 'img-fluid rounded-start h-100 w-100'}" style="${game.squareImage ? 'max-width: 50%; height: auto; object-fit: contain;' : 'object-fit: cover;'}" alt="${game.title}">
+         </div>` 
+      : '';
 
     card.innerHTML = `
       <div class="card h-100 shadow-sm">
-        ${imageHtml}
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-start mb-2">
-            <h5 class="card-title mb-0">${game.title}</h5>
-            <span class="badge text-bg-warning">${stars}</span>
+        <div class="row g-0">
+          <div class="${game.image ? 'col-md-8' : 'col-12'}">
+            <div class="card-body">
+              <div class="mb-2">
+                <h5 class="card-title d-inline mb-0">${game.title}</h5>
+                <span class="badge ms-2" style="background-color: transparent; border: 2px solid #f08c5d; color: inherit;">${stars}</span>
+              </div>
+              <small class="text-muted">${year}</small>
+              <p class="card-text mt-3">${game.description || 'Jeu intéressant'}</p>
+              <div class="d-flex gap-2 flex-wrap">
+                ${game.genres.split(',').map(genre => `<span class="badge text-bg-light">${capitalizeGenre(genre)}</span>`).join('')}
+              </div>
+            </div>
           </div>
-          <small class="text-muted">${month}</small>
-          <p class="card-text mt-3">${game.description || 'Jeu intéressant'}</p>
-          <div class="d-flex gap-2 flex-wrap">
-            ${game.genres.split(',').map(genre => `<span class="badge text-bg-light">${capitalizeGenre(genre)}</span>`).join('')}
-          </div>
+          ${imageHtml}
         </div>
       </div>
     `;

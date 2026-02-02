@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="col-12 col-sm-6 col-lg-4 origami-card" data-artist="${origami.artist}">
         <div class="card h-100 shadow-sm">
           <!-- Carousel for Origami ${index + 1} -->
-          <div id="carousel-${index + 1}" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div id="carousel-${index + 1}" class="carousel slide carousel-fade">
             <div class="carousel-inner">
               ${origami.images.map((img, imgIndex) => `
                 <div class="carousel-item ${imgIndex === 0 ? 'active' : ''}">
@@ -94,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <h5 class="card-title">${origami.title}</h5>
             <p class="card-text">${origami.description}</p>
             <div class="d-flex gap-2 flex-wrap">
-              <span class="badge text-bg-light">${origami.difficulty}</span>
               <span class="badge text-bg-info">${origami.artist}</span>
             </div>
           </div>
@@ -102,10 +101,13 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     `).join('');
 
-    // Reinitialize carousels after rendering
-    const carousels = document.querySelectorAll('[data-bs-ride="carousel"]');
+    // Reinitialize carousels after rendering with auto-cycling disabled
+    const carousels = document.querySelectorAll('.carousel');
     carousels.forEach(carouselElement => {
-      new bootstrap.Carousel(carouselElement);
+      new bootstrap.Carousel(carouselElement, {
+        interval: false, // Disable automatic cycling
+        wrap: true
+      });
     });
   }
 });
