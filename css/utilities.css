@@ -2,45 +2,103 @@
    UTILITIES & UTILITY CLASSES
    ============================================ */
 
+/* Navigation Bar */
+nav.navbar {
+  background-color: white;
+  border-bottom: 1px solid var(--color-bg-neutral);
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--color-text-dark);
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 200ms ease-in-out;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.navbar a:hover {
+  color: var(--color-primary);
+}
+
+.navbar-center a {
+  border: none;
+}
+
+.navbar a.button {
+  padding: 10px 20px;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  width: fit-content;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.navbar a.button-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.navbar a.button-secondary:hover {
+  background: rgba(240, 140, 93, 0.1);
+  color: var(--color-primary);
+}
+
+/* Navbar responsive */
+@media only screen and (max-width: 768px) {
+  .navbar a.button {
+    padding: 8px 12px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .navbar {
+    padding: 12px 20px;
+    gap: 8px;
+  }
+
+  .navbar-center {
+    gap: 12px;
+  }
+}
+
 /* Icons */
 .right-arrow-icon,
 .footer-icon {
   width: auto;
   height: auto;
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 16px 32px;
-  display: flex;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.nav-links {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-  width: 100%;
-}
-
-.nav-link {
-  font-size: 14px;
-  font-weight: 600;
-  transition: color 200ms ease-in-out;
-  text-decoration: none;
-}
-
-.nav-link.fw-bold {
-  color: var(--color-primary);
-}
-
-.nav-link:hover {
-  color: var(--color-primary);
 }
 
 /* Button Styles */
@@ -136,6 +194,16 @@ button {
   transition: all 200ms ease-in-out;
 }
 
+/* Section dividers */
+.section-divider {
+  border: 0;
+  border-top: 3px dashed var(--color-primary);
+  width: 100vw;
+  margin: 32px 0;
+  margin-left: calc(50% - 50vw);
+  opacity: 1;
+}
+
 /* Footer */
 #footer {
   width: 100%;
@@ -164,26 +232,9 @@ button {
   transform: rotate(15deg);
 }
 
-.icon-link img {
-  width: 20px;
-  height: 20px;
-}
-
 /* Responsive: Tablet */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 12px 24px;
-  }
-
-  .nav-links {
-    gap: 20px;
-  }
-
-  .nav-link {
-    font-size: 13px;
-  }
-
-  .hero-title {
+  .icon-link img {
     font-size: 36px;
   }
 
@@ -202,26 +253,30 @@ button {
   #footer {
     padding: 30px 40px;
   }
+
+  nav.navbar {
+    padding: 12px 24px;
+    gap: 12px;
+  }
+
+  .navbar-center {
+    gap: 16px;
+  }
+
+  .navbar a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .navbar a.navbar-contact {
+    padding: 8px 16px;
+  }
 }
 
 /* Responsive: Mobile */
 @media (max-width: 480px) {
-  .navbar {
-    padding: 10px 16px;
-  }
-
-  .nav-links {
-    gap: 12px;
-    flex-wrap: nowrap;
-  }
-
-  .nav-link {
-    font-size: 12px;
-  }
-
-  a.button {
-    padding: 8px 16px;
-    font-size: 12px;
+  .button-text {
+    white-space: nowrap;
   }
 
   .hero-title {
@@ -243,3 +298,37 @@ button {
   #footer {
     padding: 20px 16px;
   }
+
+  nav.navbar {
+    padding: 10px 16px;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    width: auto;
+    margin-bottom: 0;
+    flex: 0 0 auto;
+  }
+
+  .navbar-center {
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .navbar a {
+    font-size: 12px;
+    padding: 6px 8px;
+    white-space: nowrap;
+  }
+
+  .navbar a.navbar-contact {
+    width: 100%;
+    text-align: center;
+    padding: 10px 16px;
+  }
+}

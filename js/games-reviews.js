@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     card.setAttribute('data-year', game.date);
 
     const stars = generateStars(game.rating);
-    const year = game.date;
+    const month = game.month ? new Date(game.date + '-' + game.month + '-01').toLocaleString('en-US', { month: 'short', year: 'numeric' }) : game.date;
 
     const imageHtml = game.image 
       ? `<div class="col-md-4 d-flex ${game.squareImage ? 'align-items-center justify-content-end' : ''}">
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h5 class="card-title d-inline mb-0">${game.title}</h5>
                 <span class="badge ms-2" style="background-color: transparent; border: 2px solid #f08c5d; color: inherit;">${stars}</span>
               </div>
-              <small class="text-muted">${year}</small>
+              <small class="text-muted">${month}</small>
               <p class="card-text mt-3">${game.description || 'Jeu intéressant'}</p>
               <div class="d-flex gap-2 flex-wrap">
                 ${game.genres.split(',').map(genre => `<span class="badge text-bg-light">${capitalizeGenre(genre)}</span>`).join('')}
@@ -179,13 +179,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sort
     const sortValue = sortSelect?.value || 'date-desc';
     filtered.sort((a, b) => {
-      const aDate = a.getAttribute('data-date');
-      const bDate = b.getAttribute('data-date');
+      const aDate = parseFloat(a.getAttribute('data-date'));
+      const bDate = parseFloat(b.getAttribute('data-date'));
       const aRating = parseFloat(a.getAttribute('data-rating'));
       const bRating = parseFloat(b.getAttribute('data-rating'));
 
-      if (sortValue === 'date-desc') return bDate.localeCompare(aDate);
-      if (sortValue === 'date-asc') return aDate.localeCompare(bDate);
+      if (sortValue === 'date-desc') return bDate - aDate;
+      if (sortValue === 'date-asc') return aDate - bDate;
       if (sortValue === 'rating-desc') return bRating - aRating;
       if (sortValue === 'rating-asc') return aRating - bRating;
     });

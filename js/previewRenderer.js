@@ -72,7 +72,6 @@ function renderOrigamiPreview() {
           <h5 class="card-title">${origami.title}</h5>
           <p class="card-text text-muted small">${origami.description}</p>
           <div class="d-flex gap-2 flex-wrap mt-2">
-            <span class="badge text-bg-light">${origami.difficulty}</span>
             <span class="badge text-bg-info">${origami.artist}</span>
           </div>
         </div>
@@ -85,12 +84,12 @@ function renderGamesPreview() {
   const container = document.getElementById('games-preview-container');
   if (!container) return;
 
-  // Show last N games
-  const preview = gamesData.slice(-PREVIEW_CONFIG.gamesCount);
+  // Show first N games
+  const preview = gamesData.slice(0, PREVIEW_CONFIG.gamesCount);
 
   container.innerHTML = preview.map(game => {
     const stars = generateStars(game.rating);
-    const month = new Date(game.date + '-01').toLocaleString('fr-FR', { month: 'short', year: 'numeric' });
+    const month = game.month ? new Date(game.date + '-' + game.month + '-01').toLocaleString('en-US', { month: 'short', year: 'numeric' }) : game.date;
 
     return `
       <div class="col-12 col-lg-6">

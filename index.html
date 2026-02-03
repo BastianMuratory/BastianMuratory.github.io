@@ -23,17 +23,19 @@
 	</head>
 	<body>
     <!-- NAVBAR -->
-    <div class="navbar">
-      <div class="nav-links">
-        <a href="./index.html" class="nav-link fw-bold">Home</a>
-        <a href="./pages/projects.html" class="nav-link">Projects</a>
-        <a href="./pages/origami.html" class="nav-link">Origami</a>
-        <a href="./pages/games-reviews.html" class="nav-link">Games</a>
-        <a class="button ms-auto" href="mailto:bastian.muratory@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="./index.html" class="button button-secondary">Home</a>
       </div>
-    </div>
+      <div class="navbar-center">
+        <a href="./pages/projects.html">Projects</a>
+        <a href="./pages/origami.html">Origami</a>
+        <a href="./pages/games-reviews.html">Games</a>
+      </div>
+      <div class="navbar-right">
+        <a href="mailto:bastian.muratory@gmail.com" class="button button-secondary">Contact Me</a>
+      </div>
+    </nav>
 
     <!-- MAIN CONTENT -->
     <div id="main-content">
@@ -41,33 +43,30 @@
       <!-- HERO SECTION -->
       <section id="home" class="hero-section">
         <div class="hero-text-container">
-          <h1 class="hero-title">Hi, I'm Bastian</h1>
-          <p class="hero-subtitle">Embedded systems engineer passionate about technology, origami and video games</p>
-          <div class="hero-cta">
-            <a href="#sections" class="button button-primary">
+          <div class="hero-title-with-cta">
+            <h1 class="hero-title">Hi, I'm Bastian</h1>
+            <a href="#sections" class="button button-secondary button-hero">
               <span class="button-text">Discover My Creations</span>
-              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="arrow"/>
-            </a>
-            <a href="mailto:bastian.muratory@gmail.com" class="button button-secondary">
-              <span class="button-text">Let's Talk</span>
+              <img src="./assets/icons/arrow-right.svg" class="down-arrow-icon" alt="arrow"/>
             </a>
           </div>
+          <p class="hero-subtitle">Welcome to my humble little website, where I like to share the stuff I enjoy doing! From technological projects to games reviews, without forgetting my passion for origami!</p>
         </div>
       </section>
 
       <!-- ABOUT SECTION WITH PICTURE -->
       <section class="about-with-picture-section">
-        <div class="about-image-container">
-          <img src="./assets/images/me600.png" class="about-image" alt="Bastian">
-        </div>
-        <div class="about-section">
-          <h2 class="section-title">About Me</h2>
-          <div class="about-content">
+        <div class="about-card">
+          <div class="about-image-container">
+            <img src="./assets/images/me600.png" class="about-image" alt="Bastian">
+          </div>
+          <div class="about-content-box">
+            <h2 class="section-title">About Me</h2>
             <p class="body-text">
-              I am currently a student in robotics and interactive systems. I am fascinated by emerging technologies and I love exploring how they work.
+              In my job as an embedded software develloper or in my personnal life with projects or hobbies, I've always loved to discover new worlds, technologies, concepts or pretty much anything !
             </p>
             <p class="body-text">
-              Whether it's computer vision, IoT, robotics or game creation, I am passionate about transforming my ideas into reality.
+              I always wanted to have a place where I could share all the things I create, build or just enjoy doing (even if I'm the only one seeing that). So this website is the perfect fit for that! You'll find here my various projects, game reviews and origami creations. If you happens to have any questions or just want to say hi, don't hesitate to contact me!
             </p>
           </div>
         </div>
@@ -75,102 +74,52 @@
 
       <!-- SECTIONS NAVIGATION -->
       <section id="sections" class="sections-navigation">
-
+        
+        <hr class="section-divider" aria-hidden="true">
         <!-- PROJECTS SECTION PREVIEW -->
         <div class="section-preview mt-5">
           <div class="section-preview-header">
             <h3 class="subheader-text">💼 My Projects</h3>
-            <p class="body-text">Explore my professional, personal and academic projects</p>
-            <a href="./pages/projects.html" class="card-link">View All Projects →</a>
+            <a href="./pages/projects.html" class="card-link">View All Projects</a>
           </div>
           <div class="row g-4 mt-3" id="projects-preview-container">
             <!-- Dynamically rendered -->
           </div>
         </div>
+        <hr class="section-divider" aria-hidden="true">
 
         <!-- ORIGAMI SECTION PREVIEW -->
         <div class="section-preview mt-5">
           <div class="section-preview-header">
             <h3 class="subheader-text">🎨 Origami</h3>
-            <p class="body-text">Discover my paper folding creations with detailed explanations</p>
-            <a href="./pages/origami.html" class="card-link">View Full Gallery →</a>
+            <a href="./pages/origami.html" class="card-link">View Full Gallery</a>
           </div>
           <div class="row g-4 mt-3" id="origami-preview-container">
             <!-- Dynamically rendered -->
           </div>
         </div>
+        <hr class="section-divider" aria-hidden="true">
 
         <!-- GAMES REVIEWS SECTION PREVIEW -->
         <div class="section-preview mt-5">
           <div class="section-preview-header">
             <h3 class="subheader-text">🎮 Game Reviews</h3>
-            <p class="body-text">My impressions and reviews of games I've played recently</p>
-            <a href="./pages/games-reviews.html" class="card-link">View All Reviews →</a>
+            <a href="./pages/games-reviews.html" class="card-link">View All Reviews</a>
           </div>
           <div class="row g-4 mt-3" id="games-preview-container">
             <!-- Dynamically rendered -->
           </div>
         </div>
+        <hr class="section-divider" aria-hidden="true">
       </section>
     </div>
 
   
     <div id="footer">
       <a class="icon-link" href="mailto:bastian.muratory@gmail.com">
-        <image src="./assets/icons/mail.svg" class="footer-icon"/>
+        <img src="./assets/icons/mail.svg" class="footer-icon" alt="email"/>
       </a>
     </div>
 	</body>
 </html>
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>WEBP to PNG Converter</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; padding: 2em; }
-    input, button { margin: 1em; }
-  </style>
-</head>
-<body>
-  <h1>WEBP to PNG Converter</h1>
-  <input type="file" id="upload" accept="image/webp" />
-  <br />
-  <canvas id="canvas" style="display:none;"></canvas>
-  <br />
-  <a id="downloadLink" style="display:none;" download="converted.png">Download PNG</a>
-
-  <script>
-    const upload = document.getElementById('upload');
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-    const downloadLink = document.getElementById('downloadLink');
-
-    upload.addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-
-      const reader = new FileReader();
-      reader.onload = function(evt) {
-        const img = new Image();
-        img.onload = function() {
-          canvas.width = img.width;
-          canvas.height = img.height;
-          ctx.drawImage(img, 0, 0);
-          canvas.style.display = 'block';
-
-          const pngUrl = canvas.toDataURL('image/png');
-          downloadLink.href = pngUrl;
-          downloadLink.style.display = 'inline-block';
-        };
-        img.src = evt.target.result;
-      };
-      reader.readAsDataURL(file);
-    });
-  </script>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>-->
 

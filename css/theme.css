@@ -67,12 +67,6 @@ body {
   background-color: var(--color-bg-neutral);
 }
 
-/* Navbar styling */
-.navbar {
-  background-color: var(--color-bg-neutral);
-  border-bottom: 1px solid #d87e2b;
-}
-
 /* Form controls */
 .form-select,
 .form-select-sm {
@@ -153,7 +147,7 @@ a:hover,
 
 /* Shadow styling */
 .shadow-sm {
-  box-shadow: 0 2px 8px rgba(240, 140, 93, 0.1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
 }
 
 /* Input placeholders */
