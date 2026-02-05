@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const filterContainer = document.getElementById('feature-filters');
   const filterCollapse = document.getElementById('filterCollapse');
   const filterToggleText = document.getElementById('filter-toggle-text');
-  const projectsContainer = document.getElementById('projects-container');
+  const professionalContainer = document.getElementById('professional-projects');
+  const personalContainer = document.getElementById('personal-projects');
+  const academicContainer = document.getElementById('academic-projects');
   let selectedFilters = new Set();
 
   // Update collapse button text
@@ -14,8 +16,65 @@ document.addEventListener('DOMContentLoaded', function() {
     if (filterToggleText) filterToggleText.textContent = 'Show Filters';
   });
 
-  // Initialize images on page load
-  initializeImages();
+  // Create project card element
+  function createProjectCard(project) {
+    const card = document.createElement('div');
+    card.className = 'col-12 project-card';
+    card.setAttribute('data-tags', project.tags);
+    card.setAttribute('data-type', project.type);
+
+    const badgeBgClass = project.type === 'professional' 
+      ? 'text-bg-info' 
+      : project.type === 'personal' 
+      ? 'text-bg-success' 
+      : 'text-bg-warning';
+
+    card.innerHTML = `
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h5 class="card-title mb-0">${project.title}</h5>
+            <span class="badge ${badgeBgClass}">${project.period}</span>
+          </div>
+          <p class="card-text">
+            ${project.description}
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            ${project.tags.split(',').map(tag => `<span class="badge text-bg-light">${capitalizeTag(tag.trim())}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+    return card;
+  }
+
+  function capitalizeTag(tag) {
+    return tag
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  }
+
+  // Render projects by category
+  function renderProjectsByType() {
+    professionalContainer.innerHTML = '';
+    personalContainer.innerHTML = '';
+    academicContainer.innerHTML = '';
+
+    projectsData.forEach(project => {
+      const card = createProjectCard(project);
+      if (project.type === 'professional') {
+        professionalContainer.appendChild(card);
+      } else if (project.type === 'personal') {
+        personalContainer.appendChild(card);
+      } else if (project.type === 'academic') {
+        academicContainer.appendChild(card);
+      }
+    });
+  }
+
+  // Render all projects
+  renderProjectsByType();
 
   // Extract all unique tags from data
   const allTags = new Set();
@@ -29,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const btn = document.createElement('button');
     btn.className = 'btn btn-outline-secondary btn-sm';
     btn.setAttribute('data-filter', tag);
-    btn.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
+    btn.textContent = capitalizeTag(tag);
     btn.addEventListener('click', () => toggleFilter(tag, btn));
     filterContainer.appendChild(btn);
   });
@@ -61,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function applyFilters() {
-    const projectCards = projectsContainer.querySelectorAll('.project-card');
+    const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
       if (selectedFilters.size === 0) {
         card.style.display = '';
@@ -70,25 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const cardTags = new Set(tags.split(',').map(t => t.trim()));
         const hasMatch = Array.from(selectedFilters).some(filter => cardTags.has(filter));
         card.style.display = hasMatch ? '' : 'none';
-      }
-    });
-  }
-
-  function initializeImages() {
-    const projectCards = projectsContainer.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-      const imageUrl = card.getAttribute('data-image');
-      if (imageUrl && imageUrl.trim() !== '') {
-        const cardElement = card.querySelector('.card');
-        const existingImage = cardElement.querySelector('.card-img-top');
-        
-        if (!existingImage) {
-          const img = document.createElement('img');
-          img.src = imageUrl;
-          img.className = 'card-img-top';
-          img.alt = card.querySelector('.card-title')?.textContent || 'Project';
-          cardElement.insertBefore(img, cardElement.firstChild);
-        }
       }
     });
   }

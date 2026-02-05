@@ -5,7 +5,7 @@ const projectsData = [
     title: "Industrial Robotics System",
     period: "2023 - 2024",
     type: "professional",
-    description: "Development of a control system for industrial robotic arms using embedded microcontrollers. Work on real-time communication and performance optimization.",
+    description: "THIS IS FAKE PROJECT USED AS PLACEHOLDER",
     tags: "c++,embedded,robotique",
     image: ""
   },
@@ -13,7 +13,7 @@ const projectsData = [
     title: "IoT Monitoring Application",
     period: "2022 - 2023",
     type: "professional",
-    description: "Creation of an IoT platform to monitor environmental sensors in real-time. Cloud integration, interactive dashboards and automated alerts.",
+    description: "THIS IS FAKE PROJECT USED AS PLACEHOLDER",
     tags: "python,iot,cloud",
     image: ""
   },
@@ -22,7 +22,7 @@ const projectsData = [
     title: "Creative Sketches Project",
     period: "2024",
     type: "personal",
-    description: "A collection of generative art pieces created with Processing. Exploration of algorithms, mathematics and visual creativity.",
+    description: "THIS IS FAKE PROJECT USED AS PLACEHOLDER",
     tags: "processing,creative-coding,generative-art",
     image: ""
   },
@@ -30,7 +30,7 @@ const projectsData = [
     title: "Personal Web Portfolio",
     period: "2024",
     type: "personal",
-    description: "This site! A modern and responsive portfolio showcasing my creations, projects and passions. Built with pure HTML, CSS and JavaScript, without external dependencies.",
+    description: "THIS IS FAKE PROJECT USED AS PLACEHOLDER",
     tags: "html5,css3,javascript",
     image: ""
   },
@@ -39,7 +39,7 @@ const projectsData = [
     title: "Autonomous Competition Robot",
     period: "2023",
     type: "academic",
-    description: "Design and programming of an autonomous robot for competition. Real-time problem solving, computer vision and navigation strategies.",
+    description: "THIS IS FAKE PROJECT USED AS PLACEHOLDER",
     tags: "python,computer-vision,robotique",
     image: ""
   },
@@ -47,7 +47,7 @@ const projectsData = [
     title: "Object Tracking System",
     period: "2022",
     type: "academic",
-    description: "Development of a real-time object tracking system using computer vision. Kalman filtering and detection algorithms for optimal accuracy.",
+    description: "THIS IS FAKE PROJECT USED AS PLACEHOLDER",
     tags: "opencv,python,image-processing",
     image: ""
   }

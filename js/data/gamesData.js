@@ -11,8 +11,8 @@ const gamesData = [
   { title: "Horizon Zero Dawn", rating: "4", date: "2025", month: "11", genres: "action-adventure,open-world,narrative,sci-fi", description: "There's nothing cooler than fighting robotic dinosaures in a post-apocalyptic world!<br>And you know what ? The story and gamplay are also really worth checking out.", image: "../assets/images/Games/HorizonZeroDawn.webp", squareImage: true },
   { title: "Cyberpunk 2077", rating: "4", date: "2025", month: "10", genres: "action-rpg,open-world,sci-fi,narrative", description: "In the future where everyone swears only by technology and implants, try to find your place in this city.<br>A+ for immersion and story-telling ...<br>But sometimes it feels our society is getting really to close from the one depicted in this game", image: "../assets/images/Games/Cyberpunk2077.jpg" },
   { title: "TowerFall", rating: "3", date: "2025", month: "09", genres: "platformer,multiplayer,co-op,action", description: "Stuck in a confined space with 3 friends and bows .... there's only one thing left to do and only one of you will enjoy the outcome!", image: "../assets/images/Games/Towerfall.avif", squareImage: true },
-  { title: "Expedition 33: Clair Obscur", rating: "5", date: "2025", month: "09", genres: "action-rpg,adventure,fantasy,turn-based-strategy", description: "", image: "../assets/images/Games/Expedition33.gif" },
-  { title: "Star Wars Jedi: Fallen Order", rating: "4", date: "2025", month: "06", genres: "space,action-adventure,narrative,sci-fi", description: "", image: "../assets/images/Games/JediFallenOrder.jpg" },
+  { title: "Expedition 33: Clair Obscur", rating: "5", date: "2025", month: "09", genres: "action-rpg,adventure,fantasy,turn-based-strategy", description: "OKAYYYYY, went into this game without expecting anything ... Boy, did it not disapoint. The visuals are extraordinary, the gameplay is feel awesome and the music hits right in the goosbumps area.<br>But DAMN, the story is on another level, it grasps you from the very frst second and won't leave you even after finishing the game!<br>Please don't spoil the story for you if you plan on giving it a try, you won't regret it", image: "../assets/images/Games/Expedition33.gif" },
+  { title: "Star Wars Jedi: Fallen Order", rating: "4", date: "2025", month: "06", genres: "space,action-adventure,narrative,sci-fi", description: "As in the first one, it's great to discover the univers of star wars from a different point of view than the main saga !", image: "../assets/images/Games/JediFallenOrder.jpg" },
   { title: "The Talos Principle II", rating: "4", date: "2025", month: "04", genres: "puzzle,sci-fi,narrative", description: "", image: "../assets/images/Games/TheThalosPrinciple.jpg" },
   { title: "Ratchet & Clank: Rift Apart", rating: "4", date: "2025", month: "03", genres: "action-adventure,platformer,narrative", description: "", image: "../assets/images/Games/RatchetAndClankRiftApart.webp" },
   { title: "The Gunk", rating: "1", date: "2025", month: "02", genres: "action-adventure,indie", description: "", image: "../assets/images/Games/TheGunk.jpg" },
@@ -23,16 +23,16 @@ const gamesData = [
   { title: "Turnip Boy Commits Tax Evasion", rating: "3", date: "2024", month: "10", genres: "action-adventure,indie,comedy", description: "", image: "../assets/images/Games/TurnipBoyCommitTaxEvasion.jpg" },
   { title: "Minishoot' Adventure", rating: "2", date: "2024", month: "9", genres: "action,adventure,arcade", description: "", image: "../assets/images/Games/MinishootAdventure.jpg" },
   { title: "The Land Beneath Us", rating: "3", date: "2024", month: "8", genres: "action,roguelike,indie,turn-based-strategy", description: "", image: "../assets/images/Games/TheLandBeneathUS.jpg" },
-  { title: "Shants of Sennaar", rating: "5", date: "2024", month: "7", genres: "puzzle,aventure,indie", description: "", image: "../assets/images/Games/ChantOfSennaar.jpg" },
+  { title: "Shants of Sennaar", rating: "5", date: "2024", month: "7", genres: "puzzle,aventure,indie", description: "In this great puzzle game, you play as a traveller exploring the tower of Babel.<br>As you climb through the tower you will have to learn multiple languages, each with their own grammar, vocabulary and way of speaking. Help communities find a way to regain communication with each others.<br>The style is orginal, the story is full of misteries to solve and the puzzles are very well designed to help you understand each languages! I Love this game for it's originality!", image: "../assets/images/Games/ChantOfSennaar.jpg" },
   { title: "Animal Well", rating: "4", date: "2024", month: "6", genres: "metroidvania,puzzle,indie", description: "", image: "../assets/images/Games/AnimalWell.jpg" },
   { title: "Voidigo", rating: "2", date: "2024", month: "4", genres: "roguelike,action,indie", description: "", image: "../assets/images/Games/Voidigo.jpg" },
   { title: "RoboQuest", rating: "1", date: "2024", month: "4", genres: "roguelike,shooter,indie", description: "", image: "../assets/images/Games/Roboquest.jpg" },
-  { title: "No Man's Sky", rating: "5", date: "2024", month: "4", genres: "exploration,survival,space,co-op,open-world,sci-fi", description: "", image: "../assets/images/Games/NoManSky.gif" },
+  { title: "No Man's Sky", rating: "5", date: "2024", month: "4", genres: "exploration,survival,space,co-op,open-world,sci-fi", description: "Thought this was just another subnautica in space, but it's actually so much more! The diversity this game offers is trully amazing, the game is beautifull and you actually feel like a traveller trying to discover the misteries of space!", image: "../assets/images/Games/NoManSky.gif" },
   { title: "PEPPER Grinder", rating: "2", date: "2024", month: "2", genres: "platformer,action,indie", description: "", image: "../assets/images/Games/PepperGrinder.jpg" },
-  { title: "Nova Drift", rating: "5", date: "2024", month: "2", genres: "roguelike,space,shooter", description: "", image: "../assets/images/Games/NovaDrift.gif" },
+  { title: "Nova Drift", rating: "5", date: "2024", month: "2", genres: "roguelike,arcade,space,shooter", description: "This one is a true arcade gem! The concept is pretty simple: you are a spaship that needs to destroy other spaceships ...<br>But the execution is perfect! each run feel unique, you'll never run the same weapons so the game feels fresh each times. Don't want to fire a weapon ? just ram full speed you enemies or build drones to do that for you!", image: "../assets/images/Games/NovaDrift.gif" },
   { title: "Detroit: Become Human", rating: "4", date: "2024", month: "2", genres: "adventure,narrative", description: "", image: "../assets/images/Games/DetroitBecomeHuman.jpg" },
   { title: "Balatro", rating: "3", date: "2024", month: "1", genres: "card-game,roguelike,indie", description: "", image: "../assets/images/Games/Balatro.jpg" },
-  { title: "Star Wars Jedi: Survivor", rating: "5", date: "2024", month: "1", genres: "action-adventure,space,narrative,sci-fi", description: "", image: "../assets/images/Games/JediSurvivor.webp" },
+  { title: "Star Wars Jedi: Survivor", rating: "5", date: "2024", month: "1", genres: "action-adventure,space,narrative,sci-fi", description: "In this game, you trully feel like a jedi trying to survive in a word not really welcoming for your kind.<br>It was trully amazing to re-discover the universe of stars wars like the way I did when I was little, going to the cinema ... but this time being the jedi!", image: "../assets/images/Games/JediSurvivor.webp" },
 
   // 2023
   { title: "Pokemon Scarlet", rating: "2", date: "2023", month: "12", genres: "rpg,adventure,creature-collection,open-world", description: "", image: "../assets/images/Games/PokemonScarlet.jpg" },
@@ -137,6 +137,7 @@ const gamesData = [
   { title: "Minecraft", rating: "5", date: "2012", month: "", genres: "sandbox,building,survival,replayable,co-op,open-world", description: "", image: "../assets/images/Games/Minecraft.gif" },
   { title: "Mario and Luigi Bowser's inside", rating: "5", date: "2012", month: "", genres: "rpg,adventure,comedy", description: "", image: "../assets/images/Games/MarioAndLuigiBowsersInside.gif" },
   { title: "Mario and Luigi Partners in Time", rating: "5", date: "2012", month: "", genres: "rpg,adventure,platformer", description: "", image: "../assets/images/Games/MarioAndLuigiPartnersInTime.png", squareImage: true },
+  { title: "Galaxy Life", rating: "4", date: "2010", month: "", genres: "space,building,multiplayer,sci-fi", description: "", image: "../assets/images/Games/GalaxieLife.jpg" },
   { title: "Skylanders", rating: "4", date: "2012", month: "", genres: "action-rpg,adventure,fantasy", description: "", image: "../assets/images/Games/SkylandersSpyroAdventure.webp" },
 
   // 2011
@@ -147,7 +148,9 @@ const gamesData = [
 
   // <2010
   { title: "Super Mario Galaxy", rating: "5", date: "2010", month: "", genres: "platformer,space,adventure", description: "", image: "../assets/images/Games/SuperMarioGalaxie.gif" },
-
+  { title: "Ricochet Infinity", rating: "2", date: "2010", month: "", genres: "arcade,puzzle,action", description: "", image: "../assets/images/Games/RicochetInfinity.jpg" },
+  { title: "Plants vs Zombies", rating: "4", date: "2010", month: "", genres: "tower-defense,arcade,puzzle", description: "", image: "../assets/images/Games/PVZ.jpg" },
+  { title: "Rayman contre les lapins crétins", rating: "3", date: "2010", month: "", genres: "fps,action,comedy", description: "", image: "../assets/images/Games/RaymanContreLapinsCretins.jpg" },
   { title: "Pokemon Diamond", rating: "4", date: "2010", month: "", genres: "rpg,adventure,creature-collection", description: "", image: "../assets/images/Games/PokemonDiamond.jpg", squareImage: true },
   { title: "Pokemon Heartgold", rating: "5", date: "2010", month: "", genres: "rpg,adventure,creature-collection", description: "", image: "../assets/images/Games/PokemonHeartgold.gif" },
   { title: "Revolt", rating: "4", date: "2010", month: "", genres: "racing,arcade", description: "", image: "../assets/images/Games/Revolt.jpg" },

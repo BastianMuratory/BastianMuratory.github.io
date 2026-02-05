@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Create review card element
   function createReviewCard(game) {
     const card = document.createElement('div');
-    card.className = 'col-12 review-card';
+    card.className = 'col-12';
     card.setAttribute('data-genres', game.genres);
     card.setAttribute('data-rating', game.rating);
     card.setAttribute('data-date', game.date);
@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
               <div class="mb-2">
                 <h5 class="card-title d-inline mb-0">${game.title}</h5>
                 <span class="badge ms-2" style="background-color: transparent; border: 2px solid #f08c5d; color: inherit;">${stars}</span>
+                <small class="text-muted ms-2">${month}</small>
               </div>
-              <small class="text-muted">${month}</small>
               <p class="card-text mt-3">${game.description || 'Jeu intéressant'}</p>
               <div class="d-flex gap-2 flex-wrap">
                 ${game.genres.split(',').map(genre => `<span class="badge text-bg-light">${capitalizeGenre(genre)}</span>`).join('')}

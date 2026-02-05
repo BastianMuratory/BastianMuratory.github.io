@@ -255,7 +255,7 @@ const origamiData = [ // beginner / intermediate / advanced
   },
   {
     id: 22,
-    title: "Cherry tree with humming-bird",
+    title: "Flower tree and humming-birds",
     artist: "Arun Johns",
     description: "A familly of humming-birds with a mother always watching out.",
     images: ["../assets/images/Origami/ArbreOiseau (1).jpg", "../assets/images/Origami/ArbreOiseau (2).jpg", "../assets/images/Origami/ArbreOiseau (3).jpg"]
@@ -269,7 +269,7 @@ const origamiData = [ // beginner / intermediate / advanced
   },
   {
     id: 39,
-    title: "Cherry Dragon",
+    title: "Cherry tree Dragon",
     artist: "Lien Quoc Dat",
     description: "Always wanted to make a dragon along some flowers. The result was so good that I had to put it in a frame !",
     images: ["../assets/images/Origami/CherryDragon (1).jpg", "../assets/images/Origami/CherryDragon (2).jpg", "../assets/images/Origami/CherryDragon (3).jpg", "../assets/images/Origami/CherryDragon (4).jpg", "../assets/images/Origami/CherryDragon (5).jpg"]

@@ -98,9 +98,9 @@ function renderGamesPreview() {
             <div class="d-flex justify-content-between align-items-start mb-2">
               <h5 class="card-title mb-0">${game.title}</h5>
               <span class="badge text-bg-warning">${stars}</span>
+              <small class="text-muted ms-2">${month}</small>
             </div>
-            <small class="text-muted">${month}</small>
-            <p class="card-text mt-3 small">${game.description || 'Jeu intéressant'}</p>
+            <p class="card-text small">${game.description || 'Jeu intéressant'}</p>
             <div class="d-flex gap-2 flex-wrap">
               ${game.genres.split(',').map(genre => `<span class="badge text-bg-light">${capitalizeGenre(genre)}</span>`).join('')}
             </div>
