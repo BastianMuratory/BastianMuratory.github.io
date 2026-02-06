@@ -1,4 +1,4 @@
 Looking to get to know me ? 
-Take a look on my website : 
+Take a look at my website :)
 
 https://BastianMuratory.github.io
