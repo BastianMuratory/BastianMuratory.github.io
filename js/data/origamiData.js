@@ -6,272 +6,272 @@ const origamiData = [ // beginner / intermediate / advanced
     title: "Humanoid Crane",
     artist: "Sasade Shinji",
     description: "What if the classic crane wanted to go to the gym ?",
-    images: ["../assets/images/Origami/HumanoidCrane (1).jpg", "../assets/images/Origami/HumanoidCrane (2).jpg", "../assets/images/Origami/HumanoidCrane (3).jpg", "../assets/images/Origami/HumanoidCrane (4).jpg", "../assets/images/Origami/HumanoidCrane (5).jpg"]
+    images: ["../assets/images/Origami-optimized/HumanoidCrane (1).avif", "../assets/images/Origami-optimized/HumanoidCrane (2).avif", "../assets/images/Origami-optimized/HumanoidCrane (3).avif", "../assets/images/Origami-optimized/HumanoidCrane (4).avif", "../assets/images/Origami-optimized/HumanoidCrane (5).avif"]
   },
   {
     id: 1,
     title: "Ancient Dragon",
     artist: "Satoshi Kamiya",
     description: "On very well known Japanese origami artist Satoshi Kamiya's design, this ancient dragon features intricate details and complex folds to bring the mythical creature to life.",
-    images: ["../assets/images/Origami/AncientDragon (1).jpg", "../assets/images/Origami/AncientDragon (2).jpg", "../assets/images/Origami/AncientDragon (3).jpg", "../assets/images/Origami/AncientDragon (4).jpg"]
+    images: ["../assets/images/Origami-optimized/AncientDragon (1).avif", "../assets/images/Origami-optimized/AncientDragon (2).avif", "../assets/images/Origami-optimized/AncientDragon (3).avif", "../assets/images/Origami-optimized/AncientDragon (4).avif"]
   },
   {
     id: 2,
     title: "Baby Kroc",
     artist: "Ziliang",
     description: "Pretty cool design of a baby crocodile, brought to life with a pretty nice colored paper too !",
-    images: ["../assets/images/Origami/BabyKroc (1).jpg", "../assets/images/Origami/BabyKroc (2).jpg", "../assets/images/Origami/BabyKroc (3).jpg", "../assets/images/Origami/BabyKroc (4).jpg"]
+    images: ["../assets/images/Origami-optimized/BabyKroc (1).avif", "../assets/images/Origami-optimized/BabyKroc (2).avif", "../assets/images/Origami-optimized/BabyKroc (3).avif", "../assets/images/Origami-optimized/BabyKroc (4).avif"]
   },
   {
     id: 3,
     title: "Bahamut Dragon",
     artist: "Lien Quoc Dat",
     description: "A majestic dragon inspired by the legendary Bahamut.",
-    images: ["../assets/images/Origami/BahamutDragon (1).jpg", "../assets/images/Origami/BahamutDragon (2).jpg", "../assets/images/Origami/BahamutDragon (3).jpg", "../assets/images/Origami/BahamutDragon (4).jpg"]
+    images: ["../assets/images/Origami-optimized/BahamutDragon (1).avif", "../assets/images/Origami-optimized/BahamutDragon (2).avif", "../assets/images/Origami-optimized/BahamutDragon (3).avif", "../assets/images/Origami-optimized/BahamutDragon (4).avif"]
   },
   {
     id: 4,
     title: "Dragon bookmark",
     artist: "Jo Nakashima",
     description: "Definitely the coolest bookmark I own, maybe because I made it myself ! Although a little too small.",
-    images: ["../assets/images/Origami/BookSaver (1).jpg", "../assets/images/Origami/BookSaver (2).jpg", "../assets/images/Origami/BookSaver (3).jpg", "../assets/images/Origami/BookSaver (4).jpg", "../assets/images/Origami/BookSaver (5).jpg", "../assets/images/Origami/BookSaver (6).jpg", "../assets/images/Origami/BookSaver (7).jpg"]
+    images: ["../assets/images/Origami-optimized/BookSaver (1).avif", "../assets/images/Origami-optimized/BookSaver (2).avif", "../assets/images/Origami-optimized/BookSaver (3).avif", "../assets/images/Origami-optimized/BookSaver (4).avif", "../assets/images/Origami-optimized/BookSaver (5).avif", "../assets/images/Origami-optimized/BookSaver (6).avif", "../assets/images/Origami-optimized/BookSaver (7).avif"]
   },
   {
     id: 5,
     title: "Cat on the moon",
     artist: "Jo Nakashima",
     description: "A little cat playing with moon, this one was made with a really thick paper.",
-    images: ["../assets/images/Origami/CatBall.jpg"]
+    images: ["../assets/images/Origami-optimized/CatBall.avif"]
   },
   {
     id: 6,
     title: "Chameleon",
     artist: "Jo Nakashima",
     description: "A very small chameleon. One again with the cartooney style of Jo Nakashima which I really like if you haven't noticed it yet.",
-    images: ["../assets/images/Origami/Chameleon (1).jpg", "../assets/images/Origami/Chameleon (2).jpg", "../assets/images/Origami/Chameleon (3).jpg"]
+    images: ["../assets/images/Origami-optimized/Chameleon (1).avif", "../assets/images/Origami-optimized/Chameleon (2).avif", "../assets/images/Origami-optimized/Chameleon (3).avif"]
   },
   {
     id: 7,
     title: "Dancing Fish",
     artist: "Lien Quoc Dat",
     description: "A very elegant fish that seems to be dancing in the water. I like the fact that the dual colored paper make it stand out even more.",
-    images: ["../assets/images/Origami/DancingFish (1).jpg", "../assets/images/Origami/DancingFish (2).jpg", "../assets/images/Origami/DancingFish (3).jpg", "../assets/images/Origami/DancingFish (4).jpg"]
+    images: ["../assets/images/Origami-optimized/DancingFish (1).avif", "../assets/images/Origami-optimized/DancingFish (2).avif", "../assets/images/Origami-optimized/DancingFish (3).avif", "../assets/images/Origami-optimized/DancingFish (4).avif"]
   },
   {
     id: 8,
     title: "Donkey",
     artist: "Daniel Chang",
     description: "One of the few origami I did during the 2025 Origami convention at Lyon (France). Amazing experience to be able to fold with some true masters.",
-    images: ["../assets/images/Origami/Donkey (1).jpg", "../assets/images/Origami/Donkey (2).jpg"]
+    images: ["../assets/images/Origami-optimized/Donkey (1).avif", "../assets/images/Origami-optimized/Donkey (2).avif"]
   },
   {
     id: 9,
     title: "Updated Heavy Dragon",
     artist: "Tsuruta Yoshimasa",
     description: "An updated version of the classic Heavy dragon that was on of the first intermediat level origamis I did.",
-    images: ["../assets/images/Origami/DoubleDragonBaby (1).jpg", "../assets/images/Origami/DoubleDragonBaby (2).jpg", "../assets/images/Origami/DoubleDragonBaby (3).jpg", "../assets/images/Origami/DoubleDragonBaby (4).jpg", "../assets/images/Origami/DoubleDragonBaby (5).jpg"]
+    images: ["../assets/images/Origami-optimized/DoubleDragonBaby (1).avif", "../assets/images/Origami-optimized/DoubleDragonBaby (2).avif", "../assets/images/Origami-optimized/DoubleDragonBaby (3).avif", "../assets/images/Origami-optimized/DoubleDragonBaby (4).avif", "../assets/images/Origami-optimized/DoubleDragonBaby (5).avif"]
   },
   {
     id: 10,
     title: "Dragon Blooming",
     artist: "Huang Zhen Ming",
     description: "A beautiful dragon accompanied by a flower, both of which I altered a bit from the original design.",
-    images: ["../assets/images/Origami/DragonFlowerBrown (1).jpg", "../assets/images/Origami/DragonFlowerBrown (2).jpg", "../assets/images/Origami/DragonFlowerBrown (3).jpg"]
+    images: ["../assets/images/Origami-optimized/DragonFlowerBrown (1).avif", "../assets/images/Origami-optimized/DragonFlowerBrown (2).avif", "../assets/images/Origami-optimized/DragonFlowerBrown (3).avif"]
   },
   {
     id: 11,
     title: "Dunkleosteus",
     artist: "Maeng Hyeong Kyu",
     description: "A prehistoric armored fish brought to life, but this time let's not let it go in water !",
-    images: ["../assets/images/Origami/Dunkleosteus (1).jpg", "../assets/images/Origami/Dunkleosteus (2).jpg", "../assets/images/Origami/Dunkleosteus (3).jpg", "../assets/images/Origami/Dunkleosteus (4).jpg", "../assets/images/Origami/Dunkleosteus (5).jpg"]
+    images: ["../assets/images/Origami-optimized/Dunkleosteus (1).avif", "../assets/images/Origami-optimized/Dunkleosteus (2).avif", "../assets/images/Origami-optimized/Dunkleosteus (3).avif", "../assets/images/Origami-optimized/Dunkleosteus (4).avif", "../assets/images/Origami-optimized/Dunkleosteus (5).avif"]
   },
   {
     id: 13,
     title: "Nautilus",
     artist: "Please contact me if you know the author!",
     description: "A very little nautilus, which I had to make given, how much I love sea creatures.",
-    images: ["../assets/images/Origami/Nautilus (1).jpg", "../assets/images/Origami/Nautilus (2).jpg", "../assets/images/Origami/Nautilus (3).jpg", "../assets/images/Origami/Nautilus (4).jpg"]
+    images: ["../assets/images/Origami-optimized/Nautilus (1).avif", "../assets/images/Origami-optimized/Nautilus (2).avif", "../assets/images/Origami-optimized/Nautilus (3).avif", "../assets/images/Origami-optimized/Nautilus (4).avif"]
   },
   {
     id: 14,
     title: "An Ocean From A Seashell",
     artist: "Li Changqi",
     description: "Legends says you can hear the ocean if you put a seashell to your ear.",
-    images: ["../assets/images/Origami/OceanSeashell (1).jpg", "../assets/images/Origami/OceanSeashell (2).jpg", "../assets/images/Origami/OceanSeashell (3).jpg", "../assets/images/Origami/OceanSeashell (4).jpg", "../assets/images/Origami/OceanSeashell (5).jpg", "../assets/images/Origami/OceanSeashell (6).jpg"]
+    images: ["../assets/images/Origami-optimized/OceanSeashell (1).avif", "../assets/images/Origami-optimized/OceanSeashell (2).avif", "../assets/images/Origami-optimized/OceanSeashell (3).avif", "../assets/images/Origami-optimized/OceanSeashell (4).avif", "../assets/images/Origami-optimized/OceanSeashell (5).avif", "../assets/images/Origami-optimized/OceanSeashell (6).avif"]
   },
   {
     id: 15,
     title: "Octopus",
     artist: "Satoshi Kamiya",
     description: "Who thought an octopus could be made out of a single square sheet of paper ? I really liked the shaping of the tentacles on this one.",
-    images: ["../assets/images/Origami/Octopus (1).jpg", "../assets/images/Origami/Octopus (2).jpg", "../assets/images/Origami/Octopus (3).jpg", "../assets/images/Origami/Octopus (4).jpg"]
+    images: ["../assets/images/Origami-optimized/Octopus (1).avif", "../assets/images/Origami-optimized/Octopus (2).avif", "../assets/images/Origami-optimized/Octopus (3).avif", "../assets/images/Origami-optimized/Octopus (4).avif"]
   },
   {
     id: 16,
     title: "Rhino Baby",
     artist: "Ziliang",
     description: "An adorable baby rhinoceros with its distinctive horn and sturdy build.",
-    images: ["../assets/images/Origami/RhinoBaby (1).jpg", "../assets/images/Origami/RhinoBaby (2).jpg"]
+    images: ["../assets/images/Origami-optimized/RhinoBaby (1).avif", "../assets/images/Origami-optimized/RhinoBaby (2).avif"]
   },
   {
     id: 17,
     title: "Scorpion",
     artist: "Please contact me if you know the author!",
     description: "A little scorpion made from 2 sheets of paper.",
-    images: ["../assets/images/Origami/Scorpion (1).jpg", "../assets/images/Origami/Scorpion (2).jpg", "../assets/images/Origami/Scorpion (3).jpg", "../assets/images/Origami/Scorpion (4).jpg", "../assets/images/Origami/Scorpion (5).jpg"]
+    images: ["../assets/images/Origami-optimized/Scorpion (1).avif", "../assets/images/Origami-optimized/Scorpion (2).avif", "../assets/images/Origami-optimized/Scorpion (3).avif", "../assets/images/Origami-optimized/Scorpion (4).avif", "../assets/images/Origami-optimized/Scorpion (5).avif"]
   },
   {
     id: 19,
     title: "Thinking Crane",
     artist: "Chiang Jie",
     description: "What if the original cran had thoutghts ?",
-    images: ["../assets/images/Origami/ThinkingCrane (1).jpg", "../assets/images/Origami/ThinkingCrane (2).jpg", "../assets/images/Origami/ThinkingCrane (3).jpg", "../assets/images/Origami/ThinkingCrane (4).jpg", "../assets/images/Origami/ThinkingCrane (5).jpg"]
+    images: ["../assets/images/Origami-optimized/ThinkingCrane (1).avif", "../assets/images/Origami-optimized/ThinkingCrane (2).avif", "../assets/images/Origami-optimized/ThinkingCrane (3).avif", "../assets/images/Origami-optimized/ThinkingCrane (4).avif", "../assets/images/Origami-optimized/ThinkingCrane (5).avif"]
   },
   {
     id: 20,
     title: "Pegasus",
     artist: "Pham HoangTuan",
     description: "Magical creatures are always fun to fold!",
-    images: ["../assets/images/Origami/Unicorn (1).jpg", "../assets/images/Origami/Unicorn (2).jpg"]
+    images: ["../assets/images/Origami-optimized/Unicorn (1).avif", "../assets/images/Origami-optimized/Unicorn (2).avif"]
   },
   {
     id: 23,
     title: "Black Cat",
     artist: "Yamaguchi Makoto",
     description: "Sometimes simple designs are the best !",
-    images: ["../assets/images/Origami/BlackCat (1).jpg", "../assets/images/Origami/BlackCat (2).jpg"]
+    images: ["../assets/images/Origami-optimized/BlackCat (1).avif", "../assets/images/Origami-optimized/BlackCat (2).avif"]
   },
   {
     id: 24,
     title: "Shinlong (Oriental Dragon)",
     artist: "Lien Quoc Dat",
     description: "Always loved dragons, this one is a modular origami that looks really great when done right. Especially with tiny papers!",
-    images: ["../assets/images/Origami/DragonOriental (1).jpg", "../assets/images/Origami/DragonOriental (2).jpg", "../assets/images/Origami/DragonOriental (3).jpg", "../assets/images/Origami/DragonOriental (4).jpg", "../assets/images/Origami/DragonOriental (5).jpg", "../assets/images/Origami/DragonOriental (6).jpg", "../assets/images/Origami/DragonOriental (7).jpg"]
+    images: ["../assets/images/Origami-optimized/DragonOriental (1).avif", "../assets/images/Origami-optimized/DragonOriental (2).avif", "../assets/images/Origami-optimized/DragonOriental (3).avif", "../assets/images/Origami-optimized/DragonOriental (4).avif", "../assets/images/Origami-optimized/DragonOriental (5).avif", "../assets/images/Origami-optimized/DragonOriental (6).avif", "../assets/images/Origami-optimized/DragonOriental (7).avif"]
   },
   {
     id: 25,
     title: "Dragon Treasure",
     artist: "Yudai Imai",
     description: "Don't you dare touch my treasure !",
-    images: ["../assets/images/Origami/DragonTreasure (1).jpg", "../assets/images/Origami/DragonTreasure (2).jpg", "../assets/images/Origami/DragonTreasure (3).jpg", "../assets/images/Origami/DragonTreasure (4).jpg"]
+    images: ["../assets/images/Origami-optimized/DragonTreasure (1).avif", "../assets/images/Origami-optimized/DragonTreasure (2).avif", "../assets/images/Origami-optimized/DragonTreasure (3).avif", "../assets/images/Origami-optimized/DragonTreasure (4).avif"]
   },
   {
     id: 26,
     title: "Fossil Tyrannosaurus",
     artist: "Issei Yoshino",
     description: "One of the origami that required the highest amount of papers compared to the usual ... well ... 1.",
-    images: ["../assets/images/Origami/FossilTyranosaure (1).jpg", "../assets/images/Origami/FossilTyranosaure (2).jpg", "../assets/images/Origami/FossilTyranosaure (3).jpg", "../assets/images/Origami/FossilTyranosaure (4).jpg", "../assets/images/Origami/FossilTyranosaure (5).jpg", "../assets/images/Origami/FossilTyranosaure (6).jpg"]
+    images: ["../assets/images/Origami-optimized/FossilTyranosaure (1).avif", "../assets/images/Origami-optimized/FossilTyranosaure (2).avif", "../assets/images/Origami-optimized/FossilTyranosaure (3).avif", "../assets/images/Origami-optimized/FossilTyranosaure (4).avif", "../assets/images/Origami-optimized/FossilTyranosaure (5).avif", "../assets/images/Origami-optimized/FossilTyranosaure (6).avif"]
   },
   {
     id: 27,
     title: "Hanging Chameleon",
     artist: "Wonseon Seo",
     description: "I really like reptiles so when I saw this model I couldn't resist folding it. Tried to integrate it with real sticks for a better effect.",
-    images: ["../assets/images/Origami/HangingChameleon (1).jpg", "../assets/images/Origami/HangingChameleon (2).jpg", "../assets/images/Origami/HangingChameleon (3).jpg"]
+    images: ["../assets/images/Origami-optimized/HangingChameleon (1).avif", "../assets/images/Origami-optimized/HangingChameleon (2).avif", "../assets/images/Origami-optimized/HangingChameleon (3).avif"]
   },
   {
     id: 28,
     title: "Hanging Wyvern",
     artist: "Lien Quoc Dat",
     description: "I like that this branch gives the impression that the wyvern is really tiny compared to the usual size at which we imagine creatures like this one !",
-    images: ["../assets/images/Origami/HangingWyvern (1).jpg", "../assets/images/Origami/HangingWyvern (2).jpg", "../assets/images/Origami/HangingWyvern (3).jpg"]
+    images: ["../assets/images/Origami-optimized/HangingWyvern (1).avif", "../assets/images/Origami-optimized/HangingWyvern (2).avif", "../assets/images/Origami-optimized/HangingWyvern (3).avif"]
   },
   {
     id: 29,
     title: "Hydra",
     artist: "Lien Quoc Dat",
     description: "The famous mythological Hydra, cut one head and ... well ... actually with this one let's not try that !",
-    images: ["../assets/images/Origami/Hydra (1).jpg", "../assets/images/Origami/Hydra (2).jpg", "../assets/images/Origami/Hydra (3).jpg"]
+    images: ["../assets/images/Origami-optimized/Hydra (1).avif", "../assets/images/Origami-optimized/Hydra (2).avif", "../assets/images/Origami-optimized/Hydra (3).avif"]
   },
   {
     id: 30,
     title: "Lotus Crane",
     artist: "Yamaki",
     description: "There's something I really like to origamis that expends from the classic crane!",
-    images: ["../assets/images/Origami/LotusCrane (1).jpg", "../assets/images/Origami/LotusCrane (2).jpg", "../assets/images/Origami/LotusCrane (3).jpg"]
+    images: ["../assets/images/Origami-optimized/LotusCrane (1).avif", "../assets/images/Origami-optimized/LotusCrane (2).avif", "../assets/images/Origami-optimized/LotusCrane (3).avif"]
   },
   {
     id: 31,
     title: "Mosasaurus",
     artist: "ino87",
     description: "Always a big fan of prehistoric marine reptiles, the mosasaurus is no exception.",
-    images: ["../assets/images/Origami/Mosasaure (1).jpg", "../assets/images/Origami/Mosasaure (2).jpg", "../assets/images/Origami/Mosasaure (3).jpg", "../assets/images/Origami/Mosa.jpg"]
+    images: ["../assets/images/Origami-optimized/Mosasaure (1).avif", "../assets/images/Origami-optimized/Mosasaure (2).avif", "../assets/images/Origami-optimized/Mosasaure (3).avif", "../assets/images/Origami-optimized/Mosa.avif"]
   },
   {
     id: 32,
     title: "Kraken Attacking A Boat",
     artist: "Patricia Crawford",
     description: "Legends of the sea often speak of giant sea monsters attacking ships. Even in the world of origami no boats are safe!",
-    images: ["../assets/images/Origami/OctopusBoat (1).jpg", "../assets/images/Origami/OctopusBoat (2).jpg", "../assets/images/Origami/OctopusBoat (3).jpg", "../assets/images/Origami/OctopusBoat (4).jpg", "../assets/images/Origami/OctopusBoat (5).jpg", "../assets/images/Origami/OctopusBoat (6).jpg", "../assets/images/Origami/OctopusBoat (7).jpg", "../assets/images/Origami/OctopusBoat (8).jpg", "../assets/images/Origami/OctopusBoat (9).jpg"]
+    images: ["../assets/images/Origami-optimized/OctopusBoat (1).avif", "../assets/images/Origami-optimized/OctopusBoat (2).avif", "../assets/images/Origami-optimized/OctopusBoat (3).avif", "../assets/images/Origami-optimized/OctopusBoat (4).avif", "../assets/images/Origami-optimized/OctopusBoat (5).avif", "../assets/images/Origami-optimized/OctopusBoat (6).avif", "../assets/images/Origami-optimized/OctopusBoat (7).avif", "../assets/images/Origami-optimized/OctopusBoat (8).avif", "../assets/images/Origami-optimized/OctopusBoat (9).avif"]
   },
   {
     id: 33,
     title: "Phoenix",
     artist: "Lien Quoc Dat",
     description: "The legendary phoenix, reborn from its ashes to soar once again. this time more papery than fiery!",
-    images: ["../assets/images/Origami/Phoenix (1).jpg", "../assets/images/Origami/Phoenix (2).jpg", "../assets/images/Origami/Phoenix (3).jpg", "../assets/images/Origami/Phoenix (4).jpg", "../assets/images/Origami/Phoenix (5).jpg", "../assets/images/Origami/Phoenix (6).jpg"]
+    images: ["../assets/images/Origami-optimized/Phoenix (1).avif", "../assets/images/Origami-optimized/Phoenix (2).avif", "../assets/images/Origami-optimized/Phoenix (3).avif", "../assets/images/Origami-optimized/Phoenix (4).avif", "../assets/images/Origami-optimized/Phoenix (5).avif", "../assets/images/Origami-optimized/Phoenix (6).avif"]
   },
   {
     id: 34,
     title: "Stingray",
     artist: "Please contact me if you know the author!",
     description: "A simple yet pretty nice stingray with it's friend.",
-    images: ["../assets/images/Origami/Raie.jpg"]
+    images: ["../assets/images/Origami-optimized/Raie.avif"]
   },
   {
     id: 35,
     title: "Desert Snake",
     artist: "Gen Hagiwara",
     description: "A Little snake guarding it's flower in the middle of the desert.",
-    images: ["../assets/images/Origami/SnakeDesert (1).jpg", "../assets/images/Origami/SnakeDesert (2).jpg", "../assets/images/Origami/SnakeDesert (3).jpg", "../assets/images/Origami/SnakeDesert (4).jpg", "../assets/images/Origami/SnakeDesert (5).jpg"]
+    images: ["../assets/images/Origami-optimized/SnakeDesert (1).avif", "../assets/images/Origami-optimized/SnakeDesert (2).avif", "../assets/images/Origami-optimized/SnakeDesert (3).avif", "../assets/images/Origami-optimized/SnakeDesert (4).avif", "../assets/images/Origami-optimized/SnakeDesert (5).avif"]
   },
   {
     id: 36,
     title: "Heavy Dragon",
     artist: "Tsuruta Yoshimasa",
     description: "The first complex origami dragon I made, and still one of my favorite. The transparent paper really gives it a unique look.",
-    images: ["../assets/images/Origami/transparentDragon (1).jpg", "../assets/images/Origami/transparentDragon (2).jpg", "../assets/images/Origami/transparentDragon (3).jpg", "../assets/images/Origami/transparentDragon (4).jpg", "../assets/images/Origami/transparentDragon (5).jpg", "../assets/images/Origami/transparentDragon (6).jpg"]
+    images: ["../assets/images/Origami-optimized/transparentDragon (1).avif", "../assets/images/Origami-optimized/transparentDragon (2).avif", "../assets/images/Origami-optimized/transparentDragon (3).avif", "../assets/images/Origami-optimized/transparentDragon (4).avif", "../assets/images/Origami-optimized/transparentDragon (5).avif", "../assets/images/Origami-optimized/transparentDragon (6).avif"]
   },
   {
     id: 37,
     title: "Turtle",
     artist: "Akira Yoshizawa",
     description: "Sea creatures are the best !",
-    images: ["../assets/images/Origami/Turtle (1).jpg", "../assets/images/Origami/Turtle (2).jpg"]
+    images: ["../assets/images/Origami-optimized/Turtle (1).avif", "../assets/images/Origami-optimized/Turtle (2).avif"]
   },
   {
     id: 38,
     title: "Raptor Dragon",
     artist: "Lien Quoc Dat",
     description: "What do you get when fusing a raptor and a wyvern ? This pretty cool origami of course!",
-    images: ["../assets/images/Origami/Wyvern (1).jpg", "../assets/images/Origami/Wyvern (2).jpg", "../assets/images/Origami/Wyvern (3).jpg", "../assets/images/Origami/Wyvern (4).jpg"]
+    images: ["../assets/images/Origami-optimized/Wyvern (1).avif", "../assets/images/Origami-optimized/Wyvern (2).avif", "../assets/images/Origami-optimized/Wyvern (3).avif", "../assets/images/Origami-optimized/Wyvern (4).avif"]
   },
   {
     id: 18,
     title: "Mini Shark",
     artist: "Tu Kaiming",
     description: "I love the cartooney style of this one, and the book it comes from has some really nice designs overall. (Origami From China)",
-    images: ["../assets/images/Origami/Shark (1).jpg", "../assets/images/Origami/Shark (2).jpg", "../assets/images/Origami/Shark (3).jpg", "../assets/images/Origami/Shark (4).jpg"]
+    images: ["../assets/images/Origami-optimized/Shark (1).avif", "../assets/images/Origami-optimized/Shark (2).avif", "../assets/images/Origami-optimized/Shark (3).avif", "../assets/images/Origami-optimized/Shark (4).avif"]
   },
   {
     id: 22,
     title: "Flower tree and humming-birds",
     artist: "Arun Johns",
     description: "A familly of humming-birds with a mother always watching out.",
-    images: ["../assets/images/Origami/ArbreOiseau (1).jpg", "../assets/images/Origami/ArbreOiseau (2).jpg", "../assets/images/Origami/ArbreOiseau (3).jpg"]
+    images: ["../assets/images/Origami-optimized/ArbreOiseau (1).avif", "../assets/images/Origami-optimized/ArbreOiseau (2).avif", "../assets/images/Origami-optimized/ArbreOiseau (3).avif"]
   },
   {
     id: 21,
     title: "Violonist",
     artist: "Hojyo Takashi",
     description: "The last really complex origami I made, a violinist playing his instrument with passion.",
-    images: ["../assets/images/Origami/Violonist (1).jpg", "../assets/images/Origami/Violonist (2).jpg", "../assets/images/Origami/Violonist (3).jpg", "../assets/images/Origami/Violonist (4).jpg", "../assets/images/Origami/Violonist (5).jpg"]
+    images: ["../assets/images/Origami-optimized/Violonist (1).avif", "../assets/images/Origami-optimized/Violonist (2).avif", "../assets/images/Origami-optimized/Violonist (3).avif", "../assets/images/Origami-optimized/Violonist (4).avif", "../assets/images/Origami-optimized/Violonist (5).avif"]
   },
   {
     id: 39,
     title: "Cherry tree Dragon",
     artist: "Lien Quoc Dat",
     description: "Always wanted to make a dragon along some flowers. The result was so good that I had to put it in a frame !",
-    images: ["../assets/images/Origami/CherryDragon (1).jpg", "../assets/images/Origami/CherryDragon (2).jpg", "../assets/images/Origami/CherryDragon (3).jpg", "../assets/images/Origami/CherryDragon (4).jpg", "../assets/images/Origami/CherryDragon (5).jpg"]
+    images: ["../assets/images/Origami-optimized/CherryDragon (1).avif", "../assets/images/Origami-optimized/CherryDragon (2).avif", "../assets/images/Origami-optimized/CherryDragon (3).avif", "../assets/images/Origami-optimized/CherryDragon (4).avif", "../assets/images/Origami-optimized/CherryDragon (5).avif"]
   }
 ];

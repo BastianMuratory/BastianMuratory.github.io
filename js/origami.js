@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function renderOrigamiCards() {
+    const lazyPlaceholder = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+
     origamiContainer.innerHTML = origamiData.map((origami, index) => `
       <div class="col-12 col-sm-6 col-lg-4 origami-card" data-artist="${origami.artist}">
         <div class="card h-100 shadow-sm">
@@ -75,7 +77,14 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="carousel-inner">
               ${origami.images.map((img, imgIndex) => `
                 <div class="carousel-item ${imgIndex === 0 ? 'active' : ''}">
-                  <img src="${img}" class="d-block w-100 carousel-image" alt="${origami.title} ${imgIndex + 1}">
+                  <img
+                    src="${imgIndex === 0 ? img : lazyPlaceholder}"
+                    ${imgIndex === 0 ? '' : `data-src="${img}"`}
+                    class="d-block w-100 carousel-image"
+                    alt="${origami.title} ${imgIndex + 1}"
+                    loading="lazy"
+                    decoding="async"
+                  >
                 </div>
               `).join('')}
             </div>
@@ -101,6 +110,14 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     `).join('');
 
+    const loadDeferredImages = (rootElement) => {
+      const deferredImages = rootElement.querySelectorAll('img[data-src]');
+      deferredImages.forEach(img => {
+        img.src = img.getAttribute('data-src');
+        img.removeAttribute('data-src');
+      });
+    };
+
     // Reinitialize carousels after rendering with auto-cycling disabled
     const carousels = document.querySelectorAll('.carousel');
     carousels.forEach(carouselElement => {
@@ -108,6 +125,22 @@ document.addEventListener('DOMContentLoaded', function() {
         interval: false, // Disable automatic cycling
         wrap: true
       });
+
+      carouselElement.addEventListener('slide.bs.carousel', event => {
+        if (event.relatedTarget) {
+          loadDeferredImages(event.relatedTarget);
+        }
+      });
     });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        loadDeferredImages(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '200px 0px' });
+
+    document.querySelectorAll('.origami-card').forEach(card => observer.observe(card));
   }
 });
