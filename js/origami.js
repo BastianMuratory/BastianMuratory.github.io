@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', function() {
               ${origami.images.map((img, imgIndex) => `
                 <div class="carousel-item ${imgIndex === 0 ? 'active' : ''}">
                   <img
-                    src="${imgIndex === 0 ? img : lazyPlaceholder}"
-                    ${imgIndex === 0 ? '' : `data-src="${img}"`}
+                    src="${lazyPlaceholder}"
+                    data-src="${img}"
                     class="d-block w-100 carousel-image"
                     alt="${origami.title} ${imgIndex + 1}"
                     loading="lazy"
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loadDeferredImages(entry.target);
         observer.unobserve(entry.target);
       });
-    }, { rootMargin: '200px 0px' });
+    }, { rootMargin: '300px 0px', threshold: 0.01 });
 
     document.querySelectorAll('.origami-card').forEach(card => observer.observe(card));
   }
