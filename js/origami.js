@@ -1,78 +1,55 @@
-// Origami filter initialization - dynamically renders from data
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   const filterContainer = document.getElementById('artist-filters');
   const filterCollapse = document.getElementById('filterCollapse');
   const filterToggleText = document.getElementById('filter-toggle-text');
   const origamiContainer = document.getElementById('origami-container');
+  const lazyPlaceholder = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+
+  if (!filterContainer || !origamiContainer) return;
+
   let selectedArtist = 'all';
 
-  // Render all origami cards from data
-  renderOrigamiCards();
+  const setToggleText = (text) => {
+    if (filterToggleText) filterToggleText.textContent = text;
+  };
 
-  // Update collapse button text
-  filterCollapse?.addEventListener('show.bs.collapse', () => {
-    if (filterToggleText) filterToggleText.textContent = 'Hide Filters';
-  });
-  filterCollapse?.addEventListener('hide.bs.collapse', () => {
-    if (filterToggleText) filterToggleText.textContent = 'Show Filters';
-  });
+  filterCollapse?.addEventListener('show.bs.collapse', () => setToggleText('Hide Filters'));
+  filterCollapse?.addEventListener('hide.bs.collapse', () => setToggleText('Show Filters'));
 
-  // Extract all unique artists from origami data
-  const allArtists = new Set();
-  origamiData.forEach(origami => {
-    allArtists.add(origami.artist);
-  });
-
-  // Generate filter buttons for each artist
-  const sortedArtists = Array.from(allArtists).sort();
-  sortedArtists.forEach(artist => {
+  const artists = [...new Set(origamiData.map(({ artist }) => artist))].sort();
+  artists.forEach(artist => {
     const btn = document.createElement('button');
     btn.className = 'btn btn-outline-secondary btn-sm';
-    btn.setAttribute('data-filter', artist);
+    btn.dataset.filter = artist;
     btn.textContent = artist;
-    btn.addEventListener('click', () => filterByArtist(artist, btn));
     filterContainer.appendChild(btn);
   });
 
-  // Setup "All" button
-  const allBtn = filterContainer.querySelector('button[data-filter="all"]');
-  if (allBtn) {
-    allBtn.addEventListener('click', () => {
-      selectedArtist = 'all';
-      document.querySelectorAll('#artist-filters button').forEach(btn => btn.classList.remove('active'));
-      allBtn.classList.add('active');
-      applyFilters();
+  const setActiveButton = (activeButton) => {
+    filterContainer.querySelectorAll('button[data-filter]').forEach(button => {
+      button.classList.toggle('active', button === activeButton);
     });
-  }
+  };
 
-  function filterByArtist(artist, btn) {
-    selectedArtist = artist;
-    document.querySelectorAll('#artist-filters button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    applyFilters();
-  }
-
-  function applyFilters() {
-    const cards = origamiContainer.querySelectorAll('.origami-card');
-    cards.forEach(card => {
+  const applyFilters = () => {
+    origamiContainer.querySelectorAll('.origami-card').forEach(card => {
       const cardArtist = card.getAttribute('data-artist');
       const matchesArtist = selectedArtist === 'all' || cardArtist === selectedArtist;
-
-      if (matchesArtist) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
+      card.style.display = matchesArtist ? '' : 'none';
     });
-  }
+  };
 
-  function renderOrigamiCards() {
-    const lazyPlaceholder = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+  const loadDeferredImages = (rootElement) => {
+    rootElement.querySelectorAll('img[data-src]').forEach(img => {
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+    });
+  };
 
+  const renderOrigamiCards = () => {
     origamiContainer.innerHTML = origamiData.map((origami, index) => `
       <div class="col-12 col-sm-6 col-lg-4 origami-card" data-artist="${origami.artist}">
         <div class="card h-100 shadow-sm">
-          <!-- Carousel for Origami ${index + 1} -->
           <div id="carousel-${index + 1}" class="carousel slide carousel-fade">
             <div class="carousel-inner">
               ${origami.images.map((img, imgIndex) => `
@@ -110,26 +87,10 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     `).join('');
 
-    const loadDeferredImages = (rootElement) => {
-      const deferredImages = rootElement.querySelectorAll('img[data-src]');
-      deferredImages.forEach(img => {
-        img.src = img.getAttribute('data-src');
-        img.removeAttribute('data-src');
-      });
-    };
-
-    // Reinitialize carousels after rendering with auto-cycling disabled
-    const carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(carouselElement => {
-      new bootstrap.Carousel(carouselElement, {
-        interval: false, // Disable automatic cycling
-        wrap: true
-      });
-
+    document.querySelectorAll('.carousel').forEach(carouselElement => {
+      new bootstrap.Carousel(carouselElement, { interval: false, wrap: true });
       carouselElement.addEventListener('slide.bs.carousel', event => {
-        if (event.relatedTarget) {
-          loadDeferredImages(event.relatedTarget);
-        }
+        if (event.relatedTarget) loadDeferredImages(event.relatedTarget);
       });
     });
 
@@ -141,6 +102,24 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }, { rootMargin: '300px 0px', threshold: 0.01 });
 
-    document.querySelectorAll('.origami-card').forEach(card => observer.observe(card));
-  }
+    const cards = document.querySelectorAll('.origami-card');
+    cards.forEach(card => observer.observe(card));
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < window.innerHeight) {
+        loadDeferredImages(card);
+        observer.unobserve(card);
+      }
+    });
+  };
+
+  filterContainer.addEventListener('click', event => {
+    const button = event.target.closest('button[data-filter]');
+    if (!button) return;
+    selectedArtist = button.dataset.filter || 'all';
+    setActiveButton(button);
+    applyFilters();
+  });
+
+  renderOrigamiCards();
 });

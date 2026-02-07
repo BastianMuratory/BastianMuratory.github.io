@@ -14,13 +14,16 @@
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/utilities.css">
     <link rel="stylesheet" href="../css/theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/origami-page.css">
 
     <script defer src="../js/script.js"></script>
     <script defer src="../js/data/origamiData.js"></script>
     <script defer src="../js/origami.js"></script>
 	</head>
-	<body>
-    <!-- NAVBAR -->
+  <body class="origami-page">
     <nav class="navbar">
       <div class="navbar-left">
         <a href="../index.html" class="button button-secondary">Home</a>
@@ -35,20 +38,21 @@
       </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
-    <div id="main-content" class="container py-4">
-
-      <!-- PAGE HEADER -->
-      <section id="page-header">
-        <h1 class="main-title">My Origami Creations</h1>
-        <p class="body-text">I remember being very young when my mother tought me how to make origamis, begining with the humble crane and progression slowly towards more complex models.</p>
-        <p class="body-text">I feel like i've always loved the patience and creativity around this art, but the science also, required to transform a single squared piece of paper into absolutely anything!</p>
-        <p class="body-text">On this page you'll find almost all the origamis i've done in my life, with the original artist that worked on the design.</p>
-
+    <div id="main-content" class="container">
+      <section id="page-header" class="origami-hero">
+        <div class="intro-frame">
+          <header class="intro-header">
+            <h1 class="main-title">My Origami Folds</h1>
+          </header>
+          <div class="intro-body">
+            <p class="body-text">I remember being very young when my mother taught me how to make origami, beginning with the humble crane and progressing slowly toward more complex models.</p>
+            <p class="body-text">I feel like I've always loved the patience and creativity around this art, but as i get older, I enjoy more and more the science required to transform a single square sheet of paper into absolutely anything.</p>
+            <p class="body-text">On this page you'll find almost all the origami I've folded in my life, along with the original artist who designed each model.</p>
+          </div>
+        </div>
       </section>
 
-      <!-- FILTER CONTROLS -->
-      <section class="mb-5">
+      <section class="mb-3">
         <div class="d-flex align-items-center gap-2 mb-3">
           <h3 class="h5 mb-0">Filter by artist:</h3>
           <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false" aria-controls="filterCollapse">
@@ -67,17 +71,15 @@
         </div>
       </section>
 
-      <!-- ORIGAMI GALLERY -->
       <section id="origami-gallery">
-        <h2 class="section-title mb-3">Gallery</h2>
+        <h2 class="section-title mb-2">Gallery</h2>
         <div class="row g-4" id="origami-container">
           <!-- Dynamically rendered from origamiData.js -->
         </div>
       </section>
 
-      <!-- ORIGAMI TIPS -->
-      <section id="origami-tips" class="mt-4">
-        <h2 class="section-title mb-3">Tips</h2>
+      <section id="origami-tips" class="mt-3">
+        <h2 class="section-title mb-2">Tips</h2>
         <div class="row g-4">
           <div class="col-12 col-md-4">
             <div class="card h-100 border-0 bg-light">
@@ -108,7 +110,6 @@
 
     </div>
 
-    <!-- FOOTER -->
     <div id="footer">
       <a class="icon-link" href="mailto:bastian.muratory@gmail.com">
         <img src="../assets/icons/mail.svg" class="footer-icon" alt="email"/>
